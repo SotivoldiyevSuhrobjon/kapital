@@ -1,0 +1,499 @@
+{% extends 'includes/base.html'%}
+{% load static %}
+{% block title%}
+personal insurance
+{% endblock%}
+
+{% block content%}
+<section class="calculator-policy">
+    <div class="policy-osgo-create">
+        <div class="container">
+
+            <div class="flex-center-block contact-us-page__container my-3">
+
+                <form id="policy-accident-form" class="v-form" action="/policy/accident/form" method="post">
+                    <input type="hidden" name="_csrf-frontend"
+                        value="WWHcLrsCNfYdPNmU9MuIuxfEK-L6dFLXQM22EB4EdeMKGYll2TJthFRJi7mHgdvBJ74TqpUaKph3hPRVRzQesg==">
+                    <div class="row custom-row--lg mb-3">
+                        <div class="col-lg-8 col-12">
+
+                            <div class="calculator-group">
+                                <h3 class="main-title-sm text-uppercase">Заполнение персональных данных</h3>
+
+                                <div class="row custom-row--sm">
+                                    <div class="col-12">
+
+                                        <div class="">
+                                            <div class="row custom-row--sm align-start">
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-group field-policyaccident-app_birthday required">
+                                                        <label class="control-label main-form-label"
+                                                            for="policyaccident-app_birthday">Дата рождения</label>
+                                                        <input type="text" id="policyaccident-app_birthday"
+                                                            class="field__input form-control mask-birthday app_birthday on-change-app-info"
+                                                            name="PolicyAccident[app_birthday]" autocomplete="off"
+                                                            placeholder="дд.мм.гггг" aria-required="true"
+                                                            maxlength="10">
+
+                                                        <div class="help-block"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-12">
+                                                    <div class="row custom-row--sm align-start justify-space-between">
+                                                        <div
+                                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4 series-two-things">
+                                                            <div
+                                                                class="form-group field-policyaccident-app_pass_sery required">
+                                                                <label
+                                                                    class="control-label main-form-label overflow-visible visible ws-nowrap"
+                                                                    for="policyaccident-app_pass_sery">Серия и номер
+                                                                    ID/Паспорта</label>
+                                                                <input type="text" id="policyaccident-app_pass_sery"
+                                                                    class="field__input form-control on-change-app-info"
+                                                                    name="PolicyAccident[app_pass_sery]" maxlength="2"
+                                                                    autocomplete="off"
+                                                                    oninput="this.value = this.value.toUpperCase()"
+                                                                    placeholder="AA" aria-required="true">
+
+                                                                <div class="help-block"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-xl-5 col-lg-5 col-md-5 col-sm-8 col-8 series-two-things-right-middle">
+                                                            <!--series-two-things-right-auto"-->
+                                                            <div
+                                                                class="form-group field-policyaccident-app_pass_num required">
+                                                                <label class="control-label main-form-label invisible"
+                                                                    for="policyaccident-app_pass_num">Номер
+                                                                    паспорта</label>
+                                                                <input type="text" id="policyaccident-app_pass_num"
+                                                                    class="field__input form-control only_number on-change-app-info"
+                                                                    name="PolicyAccident[app_pass_num]" maxlength="7"
+                                                                    placeholder="0000001" aria-required="true">
+
+                                                                <div class="help-block"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 series-two-things-right-last-btn">
+                                                            <label class="invisible main-form-label">hide</label>
+                                                            <button type="button" id="check-applicant"
+                                                                class="anketa__check s-custom-btn s-custom-primary ms-auto btn--md s-custom-btn--icon text-capitalize check-button   btn check">
+                                                                <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                                    class="check-icon">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M3.33366 9.16675C3.33366 5.94509 5.94533 3.33341 9.16699 3.33341C12.3887 3.33341 15.0003 5.94509 15.0003 9.16675C15.0003 10.7384 14.3788 12.1648 13.3682 13.2137C13.3396 13.2357 13.3122 13.2597 13.2861 13.2858C13.2599 13.312 13.2359 13.3394 13.214 13.3679C12.1651 14.3786 10.7386 15.0001 9.16699 15.0001C5.94533 15.0001 3.33366 12.3884 3.33366 9.16675ZM13.8484 15.0267C12.5653 16.053 10.9378 16.6667 9.16699 16.6667C5.02486 16.6667 1.66699 13.3089 1.66699 9.16675C1.66699 5.02461 5.02486 1.66675 9.16699 1.66675C13.3091 1.66675 16.667 5.02461 16.667 9.16675C16.667 10.9376 16.0533 12.5651 15.0269 13.8482L18.0896 16.9108C18.415 17.2363 18.415 17.7639 18.0896 18.0893C17.7641 18.4148 17.2365 18.4148 16.9111 18.0893L13.8484 15.0267Z"
+                                                                        fill="#1E2134"></path>
+                                                                </svg>
+                                                                <svg width="20" height="20" version="1.1"
+                                                                    class="clear-icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                                    y="0px" viewBox="0 0 460.775 460.775"
+                                                                    style="enable-background:new 0 0 460.775 460.775;"
+                                                                    xml:space="preserve">
+                                                                    <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+        c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+        c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+        c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+        l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+        c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                    <g>
+                                                                    </g>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="applicant-info" class="">
+
+                                            <div class="app-name-address-info">
+                                                <div class="row custom-row--sm">
+                                                    <div class="col-md-4 col-12 field">
+                                                        <div
+                                                            class="form-group field-policyaccident-app_last_name required">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyaccident-app_last_name">Фамилия</label>
+                                                            <input type="text" id="policyaccident-app_last_name"
+                                                                required
+                                                                class="field__input form-control latin_letters_no_number"
+                                                                name="PolicyAccident[app_last_name]" readonly=""
+                                                                maxlength="255"
+                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                placeholder="Введите Фамилия" aria-required="true">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-12 field">
+                                                        <div
+                                                            class="form-group field-policyaccident-app_first_name required">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyaccident-app_first_name">Имя</label>
+                                                            <input type="text" id="policyaccident-app_first_name"
+                                                                required
+                                                                class="field__input form-control latin_letters_no_number"
+                                                                name="PolicyAccident[app_first_name]" readonly=""
+                                                                maxlength="255"
+                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                placeholder="Введите Имя" aria-required="true">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-12 field">
+                                                        <div class="form-group field-policyaccident-app_middle_name">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyaccident-app_middle_name">Отчество</label>
+                                                            <input type="text" id="policyaccident-app_middle_name"
+                                                                required
+                                                                class="field__input form-control latin_letters_no_number"
+                                                                name="PolicyAccident[app_middle_name]" readonly=""
+                                                                maxlength="255"
+                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                placeholder="Введите Отчество">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="owner-info" class="row custom-row--sm mt-5">
+
+                                            <div class="col-12  owner-region-info">
+                                                <div class="row custom-row--sm">
+                                                    <div class="col-md-6 col-12 ">
+                                                        <div class="form-group field-policyaccident-region_id required">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyaccident-region_id">Область</label>
+                                                            <select id="region-select" class="form-control p-2">
+                                                                <option value="">Select a region</option>
+                                                                {% for reg in region %}
+                                                                <option value="{{ reg.id }}">{{ reg.name }}
+                                                                </option>
+                                                                {% endfor %}
+                                                            </select>
+    
+    
+    
+    
+    
+    
+    
+    
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12 field">
+                                                        <div class="form-group field-district_id required">
+                                                            <label class="control-label main-form-label"
+                                                                for="district_id">Район</label>
+                                                            <select id="city-select" class="form-control p-2">
+                                                                <option value="">Select a city</option>
+                                                                {% for c in city %}
+                                                                <option value="">{{ c.name }}
+                                                                </option>
+                                                                {% endfor %}
+                                                            </select>
+    
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                        </div>
+                                        <div class="row custom-row--sm mt-5">
+                                            <div id="owner-info" class="col-12">
+                                                <div class="row custom-row--sm">
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="row custom-row--sm">
+                                                            <div class="col-md-4 col-12">
+                                                                <div class="form-group field-policyaccident-app_phone">
+                                                                    <label class="control-label main-form-label"
+                                                                        for="policyaccident-app_phone">Номер
+                                                                        телефона</label>
+                                                                    <input type="tel" id="policyaccident-app_phone"
+                                                                        required
+                                                                        class="field__input field--mask form-control mask-phone"
+                                                                        name="PolicyAccident[app_phone]" value="+998"
+                                                                        maxlength="19" autocomplete="off"
+                                                                        placeholder="+998XX-XXX-XX-XX">
+
+                                                                    <div class="help-block"></div>
+                                                                </div>
+                                                                <div class="help-block-hint small d-none">
+                                                                    <small><i>Пожалуйста, введите существующий номер
+                                                                            телефона, так как смс о покупке полиса будет
+                                                                            отправлен на этот номер.</i></small>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-8 col-12 field">
+                                                                <div
+                                                                    class="form-group field-policyaccident-app_address required">
+                                                                    <label class="control-label main-form-label"
+                                                                        for="policyaccident-app_address">Адрес</label>
+                                                                    <input type="text" id="policyaccident-app_address"
+                                                                        class="field__input form-control"
+                                                                        name="PolicyAccident[app_address]"
+                                                                        maxlength="255"
+                                                                        oninput="this.value = this.value.toUpperCase()"
+                                                                        placeholder="Введите Адрес"
+                                                                        aria-required="true">
+
+                                                                    <div class="help-block"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="price-range-block row custom-row--sm mt-5">
+                                                <div class="col-12 ">
+                                                    <div class="field  modal__field mt-0 mb-0">
+                                                        <div class="form-group ">
+                                                            <label class="control-label">Страховая премия</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 ">
+                                                    <div class="row">
+                                                        <div class="field col-md-6 col-12">
+                                                            <div class="form-group">
+                                                                <div class="flex flex-row flex-space-between"
+                                                                    style="justify-content: space-between; flex-direction: row">
+                                                                    <p id="min-range" align="left"
+                                                                        class="control-label mb-0">
+                                                                        15 000 </p>
+                                                                    <p id="max-range" align="right"
+                                                                        class="control-label mb-0">
+                                                                        50 000 </p>
+                                                                </div>
+                                                                <input type="range" min="15000" max="50000"
+                                                                    id="price-range" class="get-calc-ajax"
+                                                                    value="35000">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12 mt-2">
+                                                            <div class="form-group ">
+                                                                <input type="text" id="range-input-price"
+                                                                    class="form-control field__input get-calc-ajax"
+                                                                    value="35 000">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <input type="hidden" id="policyaccident-amount_uzs"
+                                                    class="form-control field__input get-calc-ajax"
+                                                    name="PolicyAccident[amount_uzs]" value="35000" readonly="" min="1"
+                                                    max="100">
+                                            </div>
+
+                                            <div id="driver-info" class="pt-5 mt-5">
+                                                <div class="row custom-row--xs mt-5">
+                                                    <div class="col-md-6 col-6 pt-5">
+                                                        <div
+                                                            class="form-group field-policyaccident-start_date required">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyaccident-start_date">Дата начала</label>
+                                                            <input type="date" id="policyaccident-start_date"
+                                                                class="field__input form-control mask-date"
+                                                                name="PolicyAccident[start_date]"
+                                                                value="{{ today|date:'Y-m-d' }}" maxlength="10"
+                                                                autocomplete="off" min="2023-06-08" placeholder=""
+                                                                aria-required="true">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-6">
+                                                        <div class="form-group field-policyaccident-end_date">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyaccident-end_date">Дата окончания</label>
+                                                            <input type="text" id="policyaccident-end_date"
+                                                                class="field__input  form-control mask-date disabled readonly"
+                                                                name="PolicyAccident[end_date]"
+                                                                value="{{ one_month_later|date:'Y-m-d' }}" readonly=""
+                                                                disabled="" maxlength="10" autocomplete="off"
+                                                                placeholder="дд.мм.гггг">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="calculator-card p-relative">
+
+                                <div class="overlay-right" style="display: none;">
+                                    <div class="spinner"></div>
+                                </div>
+                                <div class="main-title-sm text-uppercase">Результаты расчета</div>
+
+                                <div class="contact-us-page__info">
+
+                                    <div id="pjax_policy_osgo_calc_result" data-pjax-container=""
+                                        data-pjax-timeout="1000">
+
+                                        <div class="calculator-card__item policy_price-block">
+                                            <div class="calculator-card__label">
+                                                Sug'urta mukofoti </div>
+                                            <div class="calculator-card__value">
+                                                <span id="policy_price">35 000</span>
+                                                <span class="currency">сўм</span>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="calculator-card__item">
+                                            <div class="calculator-card__label">
+                                                Суғурта суммаси </div>
+                                            <div class="calculator-card__value">
+                                                <span id="policy_gift_price">
+                                                    7 000 000.00</span>
+                                                <span class="currency">
+                                                    сўм </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+
+                            <div id="submit-button" class="mt-3">
+
+                                <div class="page-footer-button mt-2">
+                                    <div class="form-group field-policyaccident-offer">
+                                        <input type="hidden" name="PolicyAccident[offer]" value="0"><label><input
+                                                type="checkbox" id="policyaccident-offer" required
+                                                class="primary-accent-color fs-3" name="PolicyAccident[offer]"
+                                                value="1"> Ознакомлен(а) и согласен(а) с условиями <a
+                                                href="/rule/accident" data-pjax="0" class="offer primary-color-text"
+                                                type="button" data-toggle="" data-target="#offerModal"
+                                                target="_blank"><i>публичной оферты</i></a></label>
+                                        <div class="help-block"></div>
+                                    </div>
+                                </div>
+
+                                <div class="contact-us-page__left">
+
+                                    <div class="">
+                                        <div class="page-footer-button">
+                                            <div class="form-group">
+                                                <button type="submit"
+                                                    class="btn btn-success btn-xs s-custom-btn s-custom-primary s-custom-btn--icon mt-5 btn btn-success submitForm mb-5">Перейти
+                                                    к просмотру</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-us-page__right right-calc-block ml-2">
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="policyaccident-app_pinfl" name="PolicyAccident[app_pinfl]">
+                            <input type="hidden" id="url_post_price_calc" value="/policy/accident/calculate-price">
+                            <input type="hidden" id="url_post_tech_pass_data"
+                                value="/policy/accident/get-tech-pass-data">
+                            <input type="hidden" id="url_post_pass_birthday"
+                                value="/policy/accident/get-pass-birthday-data">
+
+                        </div>
+
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content py-5">
+    <div class="container">
+        <div class="row cards justify-content-center">
+            <div class="col-12 text-center pb-5">
+                <h1>Sugurta bolimi</h1>
+            </div>
+            {% for item in sugurta%}
+            <div class="col-12 col-md-11 col-lg-3 mt-4 mt-lg-0 m-2 border">
+                <div class="py-5 text-center">
+                    <img src="{{ item.image.url}}" class="img-fluid" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ item.title}}</h4>
+                        <p class="card-text">{{ item.description}}</p>
+                        <a href="/{{ item.link_page }}" class="btn btn-outline-primary">Ro'yxatdan otkazish</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        $('#region-select').on('change', function () {
+            var regionId = $(this).val();
+            $('#city-select').empty();
+            if (regionId) {
+                $.ajax({
+                    url: '/cities/' + regionId,
+                    success: function (data) {
+                        data.forEach(function (city) {
+                            $('#city-select').append('<option value="' + city.id + '">' + city.name + '</option>');
+                        });
+                    }
+                });
+            }
+        });
+    });
+</script>
+{% endblock%}

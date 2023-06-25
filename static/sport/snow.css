@@ -1,0 +1,12 @@
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.snowFall {
+     position: fixed !important;
+ }
+
+.z-index-99 {
+    z-index: 99 !important;
+}

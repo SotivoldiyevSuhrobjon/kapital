@@ -1,0 +1,7 @@
+let policyCsrfParam = $('meta[name="csrf-param"]').attr("content");
+let policyCsrfToken = $('meta[name="csrf-token"]').attr("content");
+let policyLang = $('html').attr('lang');
+
+let policyOverlay = jQuery('.overlay');
+let overlay_right = jQuery('.overlay-right');
+let policyOverlayRight = jQuery('.overlay-right');

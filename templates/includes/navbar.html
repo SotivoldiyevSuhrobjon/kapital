@@ -1,0 +1,50 @@
+{% load static%}
+{% load i18n %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="{% static 'video/logo1.jpg' %}" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <!-- Add your navbar links here -->
+        </ul>
+        <ul class="navbar-nav justify-content-center">
+            <li class="nav-item ps-5 pe-5">
+                <h4>
+                    <a class="nav-link h4-lg" href="#">+998332223322</a>
+                </h4>
+            </li>
+            <li class="nav-item ps-5 pe-5">
+                <h4>
+                    <a class="nav-link btn btn-warning" href="{% static 'files/europrotokol_uz.pdf'%}" download="">Europrotocol</a>
+                </h4>
+            </li>
+            <li class="nav-item ps-5 pe-5">
+
+                <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select id="language-select" name="language" class="form-control p-2">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                        <option value="{{ language.code }}">
+                            {{ language.name_local }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                    <input type="submit" value="Go">
+                </form>
+
+
+            </li>
+        </ul>
+    </div>
+</nav>
+{% bootstrap_javascript %}

@@ -1,0 +1,178 @@
+input[disabled],
+input[readonly],
+fieldset[readonly],
+fieldset[disabled],
+select[readonly],
+select[disabled] {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.text-bold {
+    font-weight: bold;
+}
+.form-group.field-policyosgo-vehicle_type_id.required {
+    max-width: 768px;
+}
+.d-none {
+    display: none !important;
+}
+.d-block {
+    display: block !important;
+}
+.series-with {
+    max-width: 70px;
+}
+.series-number-with {
+    max-width: 70px;
+}
+.btn-sm-with {
+    max-width: 60px;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+.btn-sm-with .btn {
+    min-width: auto;
+}
+.btn-sm-with .btn svg {
+    margin: 13px auto;
+}
+.btn-sm-with .btn.clear {
+    border: 2px solid #ff0000;
+}
+.btn-sm-with .btn.clear:hover {
+    background: #ff0000;
+}
+.btn-sm-with .btn.clear svg path {
+    fill: #ff0000;
+}
+.btn-sm-with .btn.clear:hover svg path {
+    fill: #fff;
+}
+.btn-sm-with .btn:hover svg path{
+    fill: #fff;
+}
+.search__icon {
+    margin: 0 auto;
+    display: block;
+}
+.check-button {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-top: 3px;
+}
+.field.modal__field.modal__field-col.series-with {position: relative;}
+
+.field.modal__field.modal__field-col.series-with+.modal__field-col .form-group label.control-label {visibility: hidden;}
+
+.field.modal__field.modal__field-col.series-with label.control-label {position: relative;min-width: 320px;display:block;}
+
+button.check-button.check svg.check-icon{
+    display: block !important;
+}
+button.check-button.check svg.clear-icon{
+    display: none !important;
+}
+button.check-button.clear svg.check-icon{
+    display: none !important;
+}
+button.check-button.clear svg.clear-icon{
+    display: block !important;
+}
+.item.panel.panel-default {
+    position: relative;
+}
+.pull-right {
+    position: absolute;
+    right: 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    top: 0;
+}
+.remove-item,
+.remove-item-driver {
+/*    width: 40px;
+    height: 40px; */
+    width: 48px;
+    height: 48px;
+    background-color: red;
+    color: #fff;
+    transition: background-color .25s;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.remove-item:hover,
+.remove-item-driver:hover {
+    background-color: #b20000;
+}
+/* custom style */
+.series-number-row-without-btn {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.series-number-row-without-btn .modal__field {
+    margin-bottom: 0;
+    max-width: 50% !important;
+}
+
+.policy-osgo form .check-button.btn.clear {
+    background-color: red;
+    border-color: red;
+}
+.policy-osgo form .check-button.btn.clear svg path{
+    fill: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .modal__field-col {
+        max-width: 100% !important;
+    }
+    .modal__container.series-number-row {
+        flex-direction: row;
+    }
+    .modal__container.series-number-row .modal__field-col{
+        max-width: initial !important;
+    }
+     .modal__container.series-number-row .modal__field-col:nth-child(2){
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90% !important;
+    } 
+    .modal__container.series-number-row .modal__field-col:last-child{
+        width: max-content !important;
+    }
+    .modal__field-col {
+        max-width: 100% !important;
+    }
+    
+    .series-number-row .modal__field-col {
+        width: calc(50% - 15px) !important;
+    }
+    .series-number-row .modal__field-col.series-with {
+        width: calc(15% - 15px) !important;
+        min-width: 70px !important;
+    }
+    /* SERIES NUMBER */
+    .series-number-row-without-btn .series-with{
+        width: calc(15% - 15px) !important;
+        min-width: 70px !important;
+    }
+    .series-number-row-without-btn .modal__field:last-child{
+        width: 95%;
+        padding-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .table-box {
+        min-width: 100%;
+        max-width:100%;
+        overflow-x: scroll;
+    }
+}

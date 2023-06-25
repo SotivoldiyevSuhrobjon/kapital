@@ -1,0 +1,1204 @@
+{% extends 'includes/base.html'%}
+
+{% load static %}
+{% block title%}
+osago form
+{% endblock%}
+
+{% block content%}
+<section class="calculator-policy">
+    <div class="policy-osgo-create">
+        <div class="container">
+
+            <div class="flex-center-block contact-us-page__container my-3">
+
+
+                <form id="policy-osgo-form" class="v-form" action="/policy/osgo/form" method="post"
+                    data-gtm-form-interact-id="0">
+                    <input type="hidden" name="_csrf-frontend"
+                        value="azNFqfcZxZ4hIbJNBWbLomiSbZymrZ6-Rxz3qnsMhqA4SxDilSmd7GhU4GB2LJjYWOhV1MnD5vFwVbXvIjzt8Q==">
+                    <div class="row custom-row--lg mb-3">
+                        <div class="col-lg-8 col-12">
+
+                            <div class="calculator-group">
+                                <h3 class="main-title-sm text-uppercase">Заполнение персональных данных</h3>
+
+                                <div class="row custom-row--sm">
+                                    <div class="col-12">
+                                        <h4 class="form-section-title mb-0 text-bold">Данные свидетельства о регистрации
+                                            (техпаспорта) транспортного средства</h4>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row custom-row--sm">
+                                            <div class="col-md-6 col-sm-5 col-12">
+                                                <div class="row custom-row--sm">
+                                                    <div class="form-group w-100 field-policyosgo-vehicle_gov_number required has-success"
+                                                        style="padding:8px;">
+                                                        <label class="control-label main-form-label"
+                                                            for="policyosgo-vehicle_gov_number">Гос. номер</label>
+                                                        <input type="text" id="policyosgo-vehicle_gov_number"
+                                                            class="field__input form-control on-change-vehicle form__anketa latin_letters_and_number"
+                                                            name="PolicyOsgo[vehicle_gov_number]" maxlength="8"
+                                                            autocomplete="off" autofocus=""
+                                                            oninput="this.value = this.value.toUpperCase()"
+                                                            placeholder="01A001AA" aria-required="true"
+                                                            data-gtm-form-interact-field-id="0" aria-invalid="false"
+                                                            readonly="readonly">
+
+                                                        <div class="help-block"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-7 col-12">
+                                                <div
+                                                    class="row custom-row--sm series-number-row align-items-start justify-content-between">
+                                                    <div class="col-xl-5 col-md-5 col-5 series-three-things">
+                                                        <div
+                                                            class="form-group field-policyosgo-tech_pass_series required has-success">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-tech_pass_series">Серия и номер тех.
+                                                                паспорта</label>
+                                                            <input type="text" id="policyosgo-tech_pass_series"
+                                                                class="field__input form-control latin_letters_no_number on-change-vehicle form__anketa"
+                                                                name="PolicyOsgo[tech_pass_series]" maxlength="3"
+                                                                autocomplete="off"
+                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                placeholder="AAF" aria-required="true"
+                                                                data-gtm-form-interact-field-id="1" aria-invalid="false"
+                                                                readonly="readonly">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-5 col-md-5 col-4 series-seven-numbers">
+                                                        <div
+                                                            class="form-group field-policyosgo-tech_pass_number required has-success">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-tech_pass_number">Tech Pass
+                                                                Number</label>
+                                                            <input type="text" id="policyosgo-tech_pass_number"
+                                                                class="field__input form-control only_number on-change-vehicle form__anketa"
+                                                                name="PolicyOsgo[tech_pass_number]" maxlength="7"
+                                                                autocomplete="off" placeholder="0000000"
+                                                                onkeypress="return (event.charCode >= 48 &amp; &amp; event.charCode <= 57)"
+                                                                aria-required="true" aria-invalid="false"
+                                                                data-gtm-form-interact-field-id="2" readonly="readonly">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2 col-md-2 col-3 ms-auto me-0">
+                                                        <div
+                                                            class="form-group field-policyosgo-tech_pass_number required has-success">
+                                                            <label class="control-label main-form-label">btn</label>
+                                                            <button type="button" id="check-vehicle"
+                                                                class="ms-auto mt-0 me-0 check-button btn anketa__check s-custom-btn s-custom-primary btn--md s-custom-btn--icon text-capitalize clear">
+                                                                <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                    fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                                    class="check-icon">
+                                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                        d="M3.33366 9.16675C3.33366 5.94509 5.94533 3.33341 9.16699 3.33341C12.3887 3.33341 15.0003 5.94509 15.0003 9.16675C15.0003 10.7384 14.3788 12.1648 13.3682 13.2137C13.3396 13.2357 13.3122 13.2597 13.2861 13.2858C13.2599 13.312 13.2359 13.3394 13.214 13.3679C12.1651 14.3786 10.7386 15.0001 9.16699 15.0001C5.94533 15.0001 3.33366 12.3884 3.33366 9.16675ZM13.8484 15.0267C12.5653 16.053 10.9378 16.6667 9.16699 16.6667C5.02486 16.6667 1.66699 13.3089 1.66699 9.16675C1.66699 5.02461 5.02486 1.66675 9.16699 1.66675C13.3091 1.66675 16.667 5.02461 16.667 9.16675C16.667 10.9376 16.0533 12.5651 15.0269 13.8482L18.0896 16.9108C18.415 17.2363 18.415 17.7639 18.0896 18.0893C17.7641 18.4148 17.2365 18.4148 16.9111 18.0893L13.8484 15.0267Z"
+                                                                        fill="#1E2134"></path>
+                                                                </svg>
+                                                                <svg width="20" height="20" version="1.1"
+                                                                    class="clear-icon "
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                                                    y="0px" viewBox="0 0 460.775 460.775"
+                                                                    style="enable-background:new 0 0 460.775 460.775;"
+                                                                    xml:space="preserve">
+                                                                    <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+                                                c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+                                                c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+                                                c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+                                                l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+                                                c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                    <g></g>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="vehicle-info" class="row custom-row--sm mt-5">
+
+                                            <div class="col-12">
+                                                <div class="row custom-row--sm">
+                                                    <div class="col-md-6 col-12 ">
+                                                        <div
+                                                            class="form-group field-policyosgo-vehicle_model_name required has-success">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-vehicle_model_name">Модель транспортного
+                                                                средства</label>
+                                                            <input type="text" id="policyosgo-vehicle_model_name"
+                                                                class="field__input form-control latin_letters_no_number"
+                                                                name="PolicyOsgo[vehicle_model_name]" readonly=""
+                                                                maxlength="255"
+                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                placeholder="Введите Модель транспортного средства"
+                                                                aria-required="true" aria-invalid="false">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                        <!--                                    -->
+                                                    </div>
+                                                    <div class="col-md-6 col-12 field modal__field modal__field-col">
+                                                        <div
+                                                            class="form-group field-policyosgo-vehicle_type_id required">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-vehicle_type_id">Вид транспортного
+                                                                средства</label>
+                                                            <input type="text" id="policyosgo-vehicle_type_id"
+                                                                class="field__input form-control latin_letters_no_number"
+                                                                name="PolicyOsgo[vehicle_type_id]"
+                                                                value="Легковые автомобили" readonly=""
+                                                                placeholder="Введите Вид транспортного средства"
+                                                                aria-required="true">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                        <input type="hidden" id="vehicle_type_id"
+                                                            name="PolicyOsgo[vehicle_type_id]" value="1">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12  owner-region-info d-none">
+                                                <div class="row custom-row--sm">
+                                                    <div class="col-md-6 col-12 ">
+                                                        <div class="form-group field-policyosgo-owner_region">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-owner_region">Регион регистрации
+                                                                ТС</label>
+                                                            <select id="policyosgo-owner_region"
+                                                                class="field__input form-control"
+                                                                name="PolicyOsgo[owner_region]" readonly=""
+                                                                maximumselectionlength="1">
+                                                                <option value="">Выберите</option>
+                                                                <option value="10">г.Ташкент</option>
+                                                                <option value="11">Ташкентский область</option>
+                                                                <option value="12">Сырдарьинский область</option>
+                                                                <option value="13">Джиззакский область</option>
+                                                                <option value="14">Самаркандский область</option>
+                                                                <option value="15">Ферганский область</option>
+                                                                <option value="16">Наманганский область</option>
+                                                                <option value="17">Андижанский область</option>
+                                                                <option value="18">Кашкадарьинский область</option>
+                                                                <option value="19">Сурхандарьинский область</option>
+                                                                <option value="20">Бухарский область</option>
+                                                                <option value="21">Навоийский область</option>
+                                                                <option value="22">Хорезмский область</option>
+                                                                <option value="23">Республика Каракалпаскистан</option>
+                                                            </select>
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12 field">
+                                                        <div class="form-group field-owner_district">
+                                                            <label class="control-label" for="owner_district">Район
+                                                                регистрации ТС</label>
+                                                            <select id="owner_district"
+                                                                class="field__input form-control"
+                                                                name="PolicyOsgo[owner_district]"
+                                                                data-krajee-depdrop="depdrop_736edafb">
+                                                                <option value="1001">Учтепа район</option>
+                                                                <option value="1003">М.Улугбекский район</option>
+                                                                <option value="1005">Яккасарайский район</option>
+                                                                <option value="1006">Шайхонтохурский район</option>
+                                                                <option value="1007">Чиланзарский район</option>
+                                                                <option value="1008">Серглийский район</option>
+                                                                <option value="1009">Мирабадский район</option>
+                                                                <option value="1010">Юнусабадский район</option>
+                                                                <option value="1011">Бектемирский район</option>
+                                                                <option value="1012">Яшнабадский район</option>
+                                                                <option value="2404">Алмазарский район</option>
+                                                                <option value="2406">Янги Хаятский район</option>
+                                                                <option value="1101">Янгиюльский район</option>
+                                                                <option value="1102">Занги-Атинский район</option>
+                                                                <option value="1103">Пскентский район</option>
+                                                                <option value="1104">Паркентский район</option>
+                                                                <option value="1105">Уртачирчикский район</option>
+                                                                <option value="1106">Аккурганский район</option>
+                                                                <option value="1107">Куйичирчикский район</option>
+                                                                <option value="1108">Кибрайский район</option>
+                                                                <option value="1109">Ташкентский район</option>
+                                                                <option value="1110">Ахангаранский район</option>
+                                                                <option value="1111">Бекабадский район</option>
+                                                                <option value="1112">Бостанлыкский район</option>
+                                                                <option value="1113">Букинский район</option>
+                                                                <option value="1114">Юкоричирчикский район</option>
+                                                                <option value="1115">Чиназский район</option>
+                                                                <option value="1116">город Ангрен</option>
+                                                                <option value="1117">город Бекобод</option>
+                                                                <option value="1118">город Олмалик</option>
+                                                                <option value="1119">г. Ахангаран</option>
+                                                                <option value="1120">город Чирчик</option>
+                                                                <option value="1121">город Янгиобод</option>
+                                                                <option value="1122">город Янгийул</option>
+                                                                <option value="1123">ГОРОД АХАНГАРАН</option>
+                                                                <option value="2405">г. Нурафшон</option>
+                                                                <option value="1201">САЙХУНАБАДСКИЙ</option>
+                                                                <option value="1202">ГУЛИСТАНСКИЙ РА</option>
+                                                                <option value="1203">БАЁВУТСКИЙ РАЙО</option>
+                                                                <option value="1204">МАХНАТАБАДСКИЙ</option>
+                                                                <option value="1205">ХАВАСТСКИЙ РАЙО</option>
+                                                                <option value="1206">МИРЗААБАДСКИЙ Р</option>
+                                                                <option value="1207">ОКОЛТИНСКИЙ РАЙ</option>
+                                                                <option value="1208">Ш.РАШИДОВСКИЙ РА</option>
+                                                                <option value="1209">СЫРДАРЬИНСКИЙ Р</option>
+                                                                <option value="1210">ГОРОД ГУЛИСТОН</option>
+                                                                <option value="1211">ГОРОД СИРДАРЁ</option>
+                                                                <option value="1212">ГОРОД ШИРИН</option>
+                                                                <option value="1213">ГОРОД ЯНГИЕР</option>
+                                                                <option value="1214">ГОРОД БАХТ</option>
+                                                                <option value="1215">САРДОБИНСКИЙ РАЙОН</option>
+                                                                <option value="1301">Зарбдарский район</option>
+                                                                <option value="1302">Дустликский район</option>
+                                                                <option value="1304">Фаришский район</option>
+                                                                <option value="1305">Джизакский район</option>
+                                                                <option value="1306">Галляаралский район</option>
+                                                                <option value="1307">БАХМАЛСКИЙ РАЙО</option>
+                                                                <option value="1308">ПАХТАКОРСКИЙ РА</option>
+                                                                <option value="1309">ЗАФАРАБАДСКИЙ Р</option>
+                                                                <option value="1310">АРНАСАЙСКИЙ РАЙ</option>
+                                                                <option value="1311">ЗОМИНСКИЙ РАЙОН</option>
+                                                                <option value="1312">МИРЗАЧУЛЬСКИЙ Р</option>
+                                                                <option value="1313">ЯНГИАБАДСКИЙ РА</option>
+                                                                <option value="1314">ГОРОД ЖИЗЗАХ</option>
+                                                                <option value="1315">ШАРОФ-РАШИДОВ ТУМАНИ</option>
+                                                                <option value="1401">НАРПАЙСКИЙ РАЙО</option>
+                                                                <option value="1402">НУРАБАДСКИЙ РАЙ</option>
+                                                                <option value="1403">ДЖАМБАЙСКИЙ РАЙ</option>
+                                                                <option value="1404">УРГУТСКИЙ РАЙОН</option>
+                                                                <option value="1405">ПАХТАЧИНСКИЙ РА</option>
+                                                                <option value="1406">КАТТАКУРГАНСКИЙ</option>
+                                                                <option value="1407">АКДАРЬИНСКИЙ РА</option>
+                                                                <option value="1408">ИШТИХАНСКИЙ РАЙ</option>
+                                                                <option value="1409">ПАСТДАРГОМСКИЙ</option>
+                                                                <option value="1410">ТАЙЛАКСКИЙ РАЙО</option>
+                                                                <option value="1411">БУЛУНГУРСКИЙ РА</option>
+                                                                <option value="1412">ГУЗАЛКЕНТСКИЙ Р</option>
+                                                                <option value="1413">САМАРКАНДСКИЙ Р</option>
+                                                                <option value="1414">КУШРАБАДСКИЙ РА</option>
+                                                                <option value="1415">ПАЙАРЫКСКИЙ РАЙ</option>
+                                                                <option value="1416">ЧЕЛАКСКИЙ РАЙОН</option>
+                                                                <option value="1417">ГОРОД САМАРКАНД</option>
+                                                                <option value="1418">БОГИШАМОЛСКИЙ Р</option>
+                                                                <option value="1419">ТЕМИРЙУЛСКИЙ РА</option>
+                                                                <option value="1420">ГОРОД ОКТОШ</option>
+                                                                <option value="1421">ГОРОД КАТТАКУРГ</option>
+                                                                <option value="1422">ГОРОД УРГУТ</option>
+                                                                <option value="1423">СИЁБ РАЙОН</option>
+                                                                <option value="1501">КИРГУЛИЙСКИЙ РА</option>
+                                                                <option value="1502">ФЕРГАНСКИЙ РАЙО</option>
+                                                                <option value="1503">КУВИНСКИЙ РАЙОН</option>
+                                                                <option value="1504">ТАШЛАКСКИЙ РАЙО</option>
+                                                                <option value="1505">АХУНБАБАЕВСКИЙ</option>
+                                                                <option value="1506">ЯЗЯВАНСКИЙ РАЙО</option>
+                                                                <option value="1507">ОЛТИАРИКСКИЙ РА</option>
+                                                                <option value="1508">БАГДАДСКИЙ РАЙО</option>
+                                                                <option value="1509">БУВАЙДИНСКИЙ РА</option>
+                                                                <option value="1510">УЧКУПРИКСКИЙ РА</option>
+                                                                <option value="1511">РИШТАНСКИЙ РАЙО</option>
+                                                                <option value="1512">ДАНГАРИНСКИЙ РА</option>
+                                                                <option value="1513">ФУРКАТСКИЙ РАЙО</option>
+                                                                <option value="1514">УЗБЕКИСТАНСКИЙ</option>
+                                                                <option value="1515">БЕШАРИКСКИЙ РАЙ</option>
+                                                                <option value="1516">СОХСКИЙ РАЙОН</option>
+                                                                <option value="1517">ГОРОД КУВАСОЙ</option>
+                                                                <option value="1518">ГОРОД КУВА</option>
+                                                                <option value="1519">ГОРОД КОКАНД</option>
+                                                                <option value="1520">ГОРОД МАРГИЛОН</option>
+                                                                <option value="1521">ГОРОД ФАРГОНА</option>
+                                                                <option value="1522">ГОРОД КИРГУЛИ</option>
+                                                                <option value="2434">КУШТЕПИНСКИЙ РАЙОН</option>
+                                                                <option value="1601">ДАВЛАТАБАДСКИЙ</option>
+                                                                <option value="1602">МИНГБУЛАКСКИЙ Р</option>
+                                                                <option value="1603">НАМАНГАНСКИЙ РА</option>
+                                                                <option value="1604">НАРИНСКИЙ РАЙОН</option>
+                                                                <option value="1605">УЙЧИНСКИЙ РАЙОН</option>
+                                                                <option value="1606">УЧКУРГАНСКИЙ РА</option>
+                                                                <option value="1607">ЧАРТАКСКИЙ РАЙО</option>
+                                                                <option value="1608">ЯНГИКУРГАНСКИЙ</option>
+                                                                <option value="1609">КАСАНСАЙСКИЙ РА</option>
+                                                                <option value="1610">ЧУСТСКИЙ РАЙОН</option>
+                                                                <option value="1611">ПАПСКИЙ РАЙОН</option>
+                                                                <option value="1612">ТУРАКУРГАНСКИЙ</option>
+                                                                <option value="1613">город Наманган</option>
+                                                                <option value="1614">ГОРОД КОСОНСОЙ</option>
+                                                                <option value="1615">ГОРОД УЧКУРГОН</option>
+                                                                <option value="1616">ГОРОД ЧОРТОК</option>
+                                                                <option value="1617">ГОРОД ЧУСТ</option>
+                                                                <option value="1618">ГОРОД ХАККУЛОБО</option>
+                                                                <option value="1701">Андижанский район</option>
+                                                                <option value="1702">Олтинкульский район</option>
+                                                                <option value="1703">Асакинский район</option>
+                                                                <option value="1704">Баликчинский район</option>
+                                                                <option value="1705">Бузский район</option>
+                                                                <option value="1706">Улугнорский район</option>
+                                                                <option value="1707">Шахриханский район</option>
+                                                                <option value="1708">Кургантепинский район</option>
+                                                                <option value="1709">Жалолкудукский район</option>
+                                                                <option value="1710">Хужаабадский район</option>
+                                                                <option value="1711">Мархаматский район</option>
+                                                                <option value="1712">Избосканский район</option>
+                                                                <option value="1713">Булокбошинский район</option>
+                                                                <option value="1714">Пахтаабадский район</option>
+                                                                <option value="1715">г. Андижон</option>
+                                                                <option value="1716">город Асака</option>
+                                                                <option value="1717">город Хонобод</option>
+                                                                <option value="1718">город Шахрихон</option>
+                                                                <option value="1719">г.Корасув</option>
+                                                                <option value="1720">Бўстон тумани</option>
+                                                                <option value="1801">ЧИРАКЧИНСКИЙ РА</option>
+                                                                <option value="1802">КАСАНСКИЙ РАЙОН</option>
+                                                                <option value="1803">ШАХРИСАБЗСКИЙ Р</option>
+                                                                <option value="1804">ДЕХКАНАБАДСКИЙ</option>
+                                                                <option value="1805">КАМАШИНСКИЙ РАЙ</option>
+                                                                <option value="1806">ЯККАБАГСКИЙ РАЙ</option>
+                                                                <option value="1807">БАХОРИСТАНСКИЙ</option>
+                                                                <option value="1808">ГУЗАРСКИЙ РАЙОН</option>
+                                                                <option value="1809">КАРШИНСКИЙ РАЙО</option>
+                                                                <option value="1810">НИШАНСКИЙ РАЙОН</option>
+                                                                <option value="1811">КИТАБСКИЙ РАЙОН</option>
+                                                                <option value="1812">КАСБИЙСКИЙ РАЙО</option>
+                                                                <option value="1813">МУБОРАКСКИЙ РАЙ</option>
+                                                                <option value="1814">У.ЮСУПОВСКИЙ РАЙ</option>
+                                                                <option value="1815">ГОРОД КАРШИ</option>
+                                                                <option value="1816">ГОРОД ШАХРИСАБЗ</option>
+                                                                <option value="1817">МИРИШКОРСКИЙ РА</option>
+                                                                <option value="1901">Термизский район</option>
+                                                                <option value="1902">БАЙСУНСКИЙ РАЙО</option>
+                                                                <option value="1903">МУЗРАБОТСКИЙ РА</option>
+                                                                <option value="1904">САРИАСИЙСКИЙ РА</option>
+                                                                <option value="1906">ШУРЧИНСКИЙ РАЙО</option>
+                                                                <option value="1907">АЛТИНСАЙСКИЙ РА</option>
+                                                                <option value="1908">КУМКУРГАНСКИЙ Р</option>
+                                                                <option value="1909">ДЖАРКУРГАНСКИЙ</option>
+                                                                <option value="1910">КИЗИРИКСКИЙ РАЙ</option>
+                                                                <option value="1911">АНГОРСКИЙ РАЙОН</option>
+                                                                <option value="1912">ШЕРАБАДСКИЙ РАЙ</option>
+                                                                <option value="1913">УЗУНСКИЙ РАЙОН</option>
+                                                                <option value="1914">ДЕНОВСКИЙ РАЙОН</option>
+                                                                <option value="1915">БАНДИХАНСКИЙ РА</option>
+                                                                <option value="1916">г.Термиз</option>
+                                                                <option value="1917">ГОРОД ДЕНОВ</option>
+                                                                <option value="2001">Ромитонский район</option>
+                                                                <option value="2002">Вобкентский район</option>
+                                                                <option value="2003">Пешкуский район</option>
+                                                                <option value="2004">Алатский район</option>
+                                                                <option value="2005">Жондорский район</option>
+                                                                <option value="2006">Каракульский район</option>
+                                                                <option value="2007">Шофирконский район</option>
+                                                                <option value="2008">Караулбазарский район</option>
+                                                                <option value="2009">город Газли</option>
+                                                                <option value="2010">Бухарский район</option>
+                                                                <option value="2011">Каганский район</option>
+                                                                <option value="2012">Гиждуванский район</option>
+                                                                <option value="2013">город Бухоро</option>
+                                                                <option value="2014">город Гиждуван</option>
+                                                                <option value="2015">город Когон</option>
+                                                                <option value="2016">Ф.Хужаевский район</option>
+                                                                <option value="2017">Тукимачиский район</option>
+                                                                <option value="2101">УЧКУДУКСКИЙ РАЙ</option>
+                                                                <option value="2102">КОНИМЕХСКИЙ РАЙ</option>
+                                                                <option value="2104">ТОМДИНСКИЙ РАЙО</option>
+                                                                <option value="2105">НАВБАХОРСКИЙ РА</option>
+                                                                <option value="2106">НАВОИЙСКИЙ РАЙО</option>
+                                                                <option value="2107">НУРАТИНСКИЙ РАЙ</option>
+                                                                <option value="2108">ХАТИРЧИНСКИЙ РА</option>
+                                                                <option value="2109">КИЗИЛТЕПИНСКИЙ</option>
+                                                                <option value="2110">КАРМАНИНСКИЙ РА</option>
+                                                                <option value="2111">ГОРОД НАВОИЙ</option>
+                                                                <option value="2112">ГОРОД ЗАРАФШОН</option>
+                                                                <option value="2113">ГОРОД УЧКУДУК</option>
+                                                                <option value="2114">ГАЗГАН ГОРОД</option>
+                                                                <option value="2201">ХАЗАРАСПСКИЙ РА</option>
+                                                                <option value="2202">ЯНГИАРИКСКИЙ РА</option>
+                                                                <option value="2203">ГУРЛАНСКИЙ РАЙО</option>
+                                                                <option value="2204">УРГАНЧСКИЙ РАЙО</option>
+                                                                <option value="2205">ШАВАТСКИЙ РАЙОН</option>
+                                                                <option value="2206">ХОНКИНСКИЙ РАЙО</option>
+                                                                <option value="2207">БОГОТСКИЙ РАЙОН</option>
+                                                                <option value="2208">ЯНГИБАЗАРСКИЙ Р</option>
+                                                                <option value="2209">КУШКУПИРСКИЙ РА</option>
+                                                                <option value="2210">ХИВИНСКИЙ РАЙОН</option>
+                                                                <option value="2211">ГОРОД УРГЕНЧ</option>
+                                                                <option value="2212">ГОРОД ХИВА</option>
+                                                                <option value="2213">ГОРОД ПИТНАК</option>
+                                                                <option value="2214">ТУПРАККАЛИНСКИЙ РАЙОН</option>
+                                                                <option value="2301">НУКУССКИЙ РАЙОН</option>
+                                                                <option value="2302">КУНГУРАДСКИЙ РА</option>
+                                                                <option value="2303">МУЙНАКСКИЙ РАЙО</option>
+                                                                <option value="2305">ТУРТКУЛЬСКИЙ РА</option>
+                                                                <option value="2306">ЭЛЛИККАЛИНСКИЙ</option>
+                                                                <option value="2307">КЕГЕЙЛИЙСКИЙ РА</option>
+                                                                <option value="2308">АМУДАРИНСКИЙ РА</option>
+                                                                <option value="2309">БЕРУНИЙСКИЙ РАЙ</option>
+                                                                <option value="2310">КАНЛЫКУЛЬСКИЙ Р</option>
+                                                                <option value="2311">ЧИМБАЙСКИЙ РАЙО</option>
+                                                                <option value="2312">ШУМАНАЙСКИЙ РАЙ</option>
+                                                                <option value="2313">ТАХТАКУПЫРСКИЙ</option>
+                                                                <option value="2314">ХОДЖЕЙЛИСКИЙ РА</option>
+                                                                <option value="2315">БОЗАТАУСКИЙ РАЙ</option>
+                                                                <option value="2316">КАРАУЗЯКСКИЙ РА</option>
+                                                                <option value="2317">ГОРОД НУКУС</option>
+                                                                <option value="2318">ГОРОД БЕРУНИЙ</option>
+                                                                <option value="2319">ГОРОД КУНГИРОТ</option>
+                                                                <option value="2320">ГОРОД ТАКИЯТОШ</option>
+                                                                <option value="2321">ГОРОД ТУРТКУЛ</option>
+                                                                <option value="2322">ГОРОД ХОЖЕЛИ</option>
+                                                                <option value="2323">ГОРОД ЧИМБОЙ</option>
+                                                            </select>
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row custom-row--sm">
+                                                    <div class="col-md-6 col-12">
+                                                        <div
+                                                            class="form-group field-policyosgo-region_id required has-success">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-region_id">Регион регистрации</label>
+                                                            <input type="text" id="policyosgo-region_id"
+                                                                class="field__input form-control latin_letters_no_number"
+                                                                name="PolicyOsgo[region_id]" value="г.Ташкент"
+                                                                readonly="" placeholder="Введите Регион регистрации"
+                                                                aria-required="true" aria-invalid="false">
+
+                                                            <div class="help-block"></div>
+                                                        </div> <input type="hidden" id="region_id"
+                                                            name="PolicyOsgo[region_id]" value="13" readonly="readonly">
+                                                    </div>
+                                                    <div class="col-md-6 col-12 ">
+                                                        <div
+                                                            class="form-group field-policyosgo-vehicle_issue_year required has-success">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-vehicle_issue_year">Год выпуска</label>
+                                                            <input type="text" id="policyosgo-vehicle_issue_year"
+                                                                class="field__input form-control only_number"
+                                                                name="PolicyOsgo[vehicle_issue_year]" readonly=""
+                                                                maxlength="4" placeholder="Введите Год выпуска"
+                                                                aria-required="true" aria-invalid="false">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row custom-row--sm">
+                                                    <div class="col-md-6 col-12 ">
+                                                        <div
+                                                            class="form-group field-policyosgo-vehicle_body_number required has-success">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-vehicle_body_number">Vehicle Body
+                                                                Number</label>
+                                                            <input type="text" id="policyosgo-vehicle_body_number"
+                                                                class="field__input form-control latin_letters_and_number"
+                                                                name="PolicyOsgo[vehicle_body_number]" maxlength="30"
+                                                                placeholder="Введите Vehicle Body Number"
+                                                                aria-required="true" readonly="readonly"
+                                                                aria-invalid="false">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12 ">
+                                                        <div
+                                                            class="form-group field-policyosgo-vehicle_engine_number required has-success">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-vehicle_engine_number">Vehicle Engine
+                                                                Number</label>
+                                                            <input type="text" id="policyosgo-vehicle_engine_number"
+                                                                class="field__input form-control latin_letters_and_number"
+                                                                name="PolicyOsgo[vehicle_engine_number]" maxlength="20"
+                                                                placeholder="Введите Vehicle Engine Number"
+                                                                aria-required="true" readonly="readonly"
+                                                                aria-invalid="false">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row custom-row--sm mt-5">
+                                            <div id="owner-info" class="col-12">
+                                                <div class="row custom-row--sm">
+                                                    <p class="col-12 contact-us-page__label mb-0 text-bold">
+                                                        Данные собственника транспортного средства </p>
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="row custom-row--sm">
+                                                            <div class="col-md-12 col-12 modal__field-full-col">
+                                                                <div
+                                                                    class="form-group field-policyosgo-owner_orgname required has-success">
+                                                                    <label class="control-label main-form-label"
+                                                                        for="policyosgo-owner_orgname">Владелец
+                                                                        автомобиля</label>
+                                                                    <input type="text" id="policyosgo-owner_orgname"
+                                                                        class="field__input form-control latin_letters_no_number"
+                                                                        name="PolicyOsgo[owner_orgname]" readonly=""
+                                                                        maxlength="255"
+                                                                        oninput="this.value = this.value.toUpperCase()"
+                                                                        placeholder="Введите Владелец автомобиля"
+                                                                        aria-required="true" aria-invalid="false">
+
+                                                                    <div class="help-block"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-12 pinfl-block">
+                                                        <div class="row custom-row--sm">
+                                                            <div class="col-md-6 col-12">
+                                                                <div
+                                                                    class="form-group field-policyosgo-owner_pinfl has-success">
+                                                                    <label class="control-label main-form-label"
+                                                                        for="policyosgo-owner_pinfl">ПИНФЛ владельца
+                                                                        ТС</label>
+                                                                    <input type="text" id="policyosgo-owner_pinfl"
+                                                                        class="field__input form-control latin_letters_no_number"
+                                                                        name="PolicyOsgo[owner_pinfl]"
+                                                                        readonly="readonly" maxlength="14"
+                                                                        autocomplete="off"
+                                                                        oninput="this.value = this.value.toUpperCase()"
+                                                                        placeholder="XXXXXXXXXXXXXX"
+                                                                        aria-invalid="false">
+
+                                                                    <div class="help-block"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 col-12">
+                                                                <div class="row custom-row--sm justify-content-between">
+                                                                    <div
+                                                                        class="col-xl-5 col-md-5 col-5 series-two-things">
+                                                                        <div
+                                                                            class="form-group field-policyosgo-owner_pass_sery has-error">
+                                                                            <label class="control-label main-form-label"
+                                                                                for="policyosgo-owner_pass_sery">Серия и
+                                                                                номер ID/Паспорта</label>
+                                                                            <input type="text"
+                                                                                id="policyosgo-owner_pass_sery"
+                                                                                class="field__input form-control"
+                                                                                name="PolicyOsgo[owner_pass_sery]"
+                                                                                maxlength="2" autocomplete="off"
+                                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                                placeholder="AA" aria-invalid="true">
+
+                                                                            <div class="help-block">Необходимо заполнить
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-xl-5 col-md-5 col-5 series-two-things-right-auto">
+                                                                        <div
+                                                                            class="form-group field-policyosgo-owner_pass_num">
+                                                                            <label class="control-label main-form-label"
+                                                                                for="policyosgo-owner_pass_num">Owner
+                                                                                Passport/ID number</label>
+                                                                            <input type="text"
+                                                                                id="policyosgo-owner_pass_num"
+                                                                                class="field__input form-control only_number"
+                                                                                name="PolicyOsgo[owner_pass_num]"
+                                                                                maxlength="7" placeholder="0000001">
+
+                                                                            <div class="help-block"></div>
+                                                                        </div>
+                                                                        <input type="hidden" id="owner_birthday"
+                                                                            name="owner_birthday"
+                                                                            value="21.03.1995"><input type="hidden"
+                                                                            id="owner_pinfl" name="owner_pinfl"
+                                                                            value="321039543200 48"><input type="hidden"
+                                                                            id="owner_pass_sery" name="owner_pass_sery"
+                                                                            value=""><input type="hidden"
+                                                                            id="owner_pass_num" name="owner_pass_num"
+                                                                            value=""><input type="hidden"
+                                                                            id="owner_last_name" name="owner_last_name"
+                                                                            value="YO‘LDOSHEV"><input type="hidden"
+                                                                            id="owner_first_name"
+                                                                            name="owner_first_name"
+                                                                            value="SAMANDAR"><input type="hidden"
+                                                                            id="owner_middle_name"
+                                                                            name="owner_middle_name"
+                                                                            value="MUXAMMADJON O‘G‘LI"><input
+                                                                            type="hidden" id="owner_address"
+                                                                            name="owner_address" value=""><input
+                                                                            type="hidden" id="owner_inn"
+                                                                            name="owner_inn" value=""><input
+                                                                            type="hidden" id="owner_fy"
+                                                                            name="PolicyOsgo[owner_fy]" value="0">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-12 inn-block d-none">
+                                                        <div class="row custom-row--sm">
+                                                            <div class="col-md-6 col-12">
+                                                                <div class="form-group field-policyosgo-owner_inn">
+                                                                    <label class="control-label main-form-label"
+                                                                        for="policyosgo-owner_inn">ИНН</label>
+                                                                    <input type="text" id="policyosgo-owner_inn"
+                                                                        class="field__input form-control only_number"
+                                                                        name="PolicyOsgo[owner_inn]" maxlength="14"
+                                                                        autocomplete="off"
+                                                                        oninput="this.value = this.value.toUpperCase()"
+                                                                        placeholder="000000001">
+
+                                                                    <div class="help-block"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-12">
+                                                        <div class="row custom-row--sm">
+                                                            <div class="col-md-6 col-12">
+                                                                <div
+                                                                    class="form-group field-policyosgo-app_phone required">
+                                                                    <label class="control-label main-form-label"
+                                                                        for="policyosgo-app_phone">Номер
+                                                                        телефона</label>
+                                                                    <input type="tel" id="policyosgo-app_phone"
+                                                                        class="field__input field--mask form-control mask-phone"
+                                                                        name="PolicyOsgo[app_phone]" value="+998"
+                                                                        maxlength="19" autocomplete="off"
+                                                                        placeholder="+998XX-XXX-XX-XX"
+                                                                        aria-required="true">
+
+                                                                    <div class="help-block"></div>
+                                                                </div>
+                                                                <div class="help-block-hint small"><small><i>Пожалуйста,
+                                                                            введите существующий номер телефона, так как
+                                                                            смс о покупке полиса будет отправлен на этот
+                                                                            номер.</i></small></div>
+                                                            </div>
+                                                            <div class="col-md-6 col-12 owner-pensioner-info d-none">
+                                                                <div
+                                                                    class="form-group field-policyosgo-owner_is_pensioner">
+                                                                    <label class="control-label main-form-label"
+                                                                        for="policyosgo-owner_is_pensioner">Сийлов</label>
+                                                                    <select id="policyosgo-owner_is_pensioner"
+                                                                        class="field__input form-control on-change-owner-info get-calc-ajax"
+                                                                        name="PolicyOsgo[owner_is_pensioner]"
+                                                                        maximumselectionlength="1">
+                                                                        <option value="1" selected="">БЕЗ ЛЬГОТ</option>
+                                                                        <option value="2">ПЕНСИОНЕР</option>
+                                                                        <option value="3">ИНВАЛИД</option>
+                                                                        <option value="4">УЧАСТНИК ВОЙНЫ 1941-1945 ЛИБО
+                                                                            ПРИРАВНЕННЫМИ К НИМ ЛИЦАМИ</option>
+                                                                        <option value="5">ВЕТЕРАН ТРУДОВОГО ФРОНТА
+                                                                            1941-1945</option>
+                                                                        <option value="6">БЫВШИЙ УЗНИК КОНЦЕНТРАЦИОННЫХ
+                                                                            ЛАГЕРЕЙ</option>
+                                                                        <option value="7">ВДОВА/РОДИТЕЛЬ ПОГИБШЕГО
+                                                                            ВОЕННОСЛУЖАЩЕГО</option>
+                                                                        <option value="8">ПОСТРАДАВШИЙ В ЧЕРНОБОЛЬСКОЙ
+                                                                            АЭС</option>
+                                                                        <option value="9">УЧАСТНИКИ АФГАНСКОЙ ВОЙНЫ
+                                                                        </option>
+                                                                    </select>
+
+                                                                    <div class="help-block"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-12 owner-is-app">
+                                                        <div class="row custom-row--sm">
+                                                            <div class="col-md-6 col-12">
+                                                                <div class="page-footer-button">
+                                                                    <div
+                                                                        class="form-group field-policyosgo-owner_is_applicant">
+                                                                        <input type="hidden"
+                                                                            name="PolicyOsgo[owner_is_applicant]"
+                                                                            value="0"><label><input type="checkbox"
+                                                                                id="policyosgo-owner_is_applicant"
+                                                                                class="on-change-insurer primary-accent-color"
+                                                                                name="PolicyOsgo[owner_is_applicant]"
+                                                                                value="1" checked=""> Владелец является
+                                                                            заявителем</label>
+                                                                        <div class="help-block"></div>
+                                                                    </div> <input type="hidden"
+                                                                        id="policyosgo-app_pinfl"
+                                                                        name="PolicyOsgo[app_pinfl]"><input
+                                                                        type="hidden" id="policyosgo-app_region"
+                                                                        name="PolicyOsgo[app_region]"><input
+                                                                        type="hidden" id="policyosgo-app_district"
+                                                                        name="PolicyOsgo[app_district]">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-12 ">
+                                                        <div class="row custom-row--sm">
+                                                            <div class="col-12">
+                                                                <div
+                                                                    class="form-group field-policyosgo-driver_limit_id">
+                                                                    <label
+                                                                        class="control-label main-form-label">Количество
+                                                                        водителей</label>
+                                                                    <input type="hidden"
+                                                                        name="PolicyOsgo[driver_limit_id]" value="">
+                                                                    <div id="policyosgo-driver_limit_id"
+                                                                        class="row mx-0 field__input form-control  get-calc-ajax gy-1"
+                                                                        role="radiogroup">
+                                                                        <div class="pretty p-default p-round p-smooth">
+                                                                            <input type="radio" checked=""
+                                                                                name="PolicyOsgo[driver_limit_id]"
+                                                                                value="0"
+                                                                                data-add_driver_label="Добавить родственник"
+                                                                                data-driver_label="Родственник"
+                                                                                class="change-driver_limit primary-accent-color"><i
+                                                                                class="ml-05"></i>
+                                                                            <div class="state p-warning-o"><label
+                                                                                    class="checkbox mr-4 position-relative">Не
+                                                                                    ограничено</label></div>
+                                                                        </div>
+                                                                        <div class="pretty p-default p-round p-smooth">
+                                                                            <input type="radio"
+                                                                                name="PolicyOsgo[driver_limit_id]"
+                                                                                value="1"
+                                                                                data-add_driver_label="Добавить водителя"
+                                                                                data-driver_label="Водитель"
+                                                                                class="change-driver_limit primary-accent-color"><i
+                                                                                class="ml-05"></i>
+                                                                            <div class="state p-warning-o"><label
+                                                                                    class="checkbox mr-4 position-relative">Ограничено
+                                                                                    до 5 человек</label></div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="help-block"></div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Button trigger modal -->
+                                                            <!--                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">-->
+                                                            <!--                                                Launch static backdrop modal-->
+                                                            <!--                                            </button>-->
+
+                                                            <!-- Modal -->
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="applicant-info" class="d-none">
+
+                                                <p class="contact-us-page__label text-bold">Заявитель</p>
+
+                                                <div class="">
+                                                    <div class="row custom-row--sm align-start">
+                                                        <div class="col-md-6 col-12">
+                                                            <div
+                                                                class="form-group field-policyosgo-app_birthday has-success">
+                                                                <label class="control-label main-form-label"
+                                                                    for="policyosgo-app_birthday">Дата рождения</label>
+                                                                <input type="text" id="policyosgo-app_birthday"
+                                                                    class="field__input form-control mask-birthday app_birthday on-change-app-info"
+                                                                    name="PolicyOsgo[app_birthday]" autocomplete="off"
+                                                                    placeholder="дд.мм.гггг" maxlength="10"
+                                                                    readonly="readonly" aria-invalid="false">
+
+                                                                <div class="help-block"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <div
+                                                                class="row custom-row--sm align-start justify-space-between">
+                                                                <div
+                                                                    class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4 series-two-things">
+                                                                    <div
+                                                                        class="form-group field-policyosgo-app_pass_sery">
+                                                                        <label
+                                                                            class="control-label main-form-label overflow-visible visible ws-nowrap"
+                                                                            for="policyosgo-app_pass_sery">Серия и номер
+                                                                            ID/Паспорта</label>
+                                                                        <input type="text" id="policyosgo-app_pass_sery"
+                                                                            class="field__input form-control on-change-app-info"
+                                                                            name="PolicyOsgo[app_pass_sery]"
+                                                                            maxlength="2" autocomplete="off"
+                                                                            oninput="this.value = this.value.toUpperCase()"
+                                                                            placeholder="AA">
+
+                                                                        <div class="help-block"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="col-xl-5 col-lg-5 col-md-5 col-sm-8 col-8 series-two-things-right-middle">
+                                                                    <!--series-two-things-right-auto"-->
+                                                                    <div
+                                                                        class="form-group field-policyosgo-app_pass_num">
+                                                                        <label
+                                                                            class="control-label main-form-label invisible"
+                                                                            for="policyosgo-app_pass_num">App
+                                                                            Passport/ID Num</label>
+                                                                        <input type="text" id="policyosgo-app_pass_num"
+                                                                            class="field__input form-control only_number on-change-app-info"
+                                                                            name="PolicyOsgo[app_pass_num]"
+                                                                            maxlength="7" placeholder="0000001">
+
+                                                                        <div class="help-block"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 series-two-things-right-last-btn">
+                                                                    <label
+                                                                        class="invisible main-form-label">hide</label>
+                                                                    <button type="button" id="check-applicant"
+                                                                        class="anketa__check s-custom-btn s-custom-primary ms-auto btn--md s-custom-btn--icon text-capitalize check-button   btn check">
+                                                                        <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            class="check-icon">
+                                                                            <path fill-rule="evenodd"
+                                                                                clip-rule="evenodd"
+                                                                                d="M3.33366 9.16675C3.33366 5.94509 5.94533 3.33341 9.16699 3.33341C12.3887 3.33341 15.0003 5.94509 15.0003 9.16675C15.0003 10.7384 14.3788 12.1648 13.3682 13.2137C13.3396 13.2357 13.3122 13.2597 13.2861 13.2858C13.2599 13.312 13.2359 13.3394 13.214 13.3679C12.1651 14.3786 10.7386 15.0001 9.16699 15.0001C5.94533 15.0001 3.33366 12.3884 3.33366 9.16675ZM13.8484 15.0267C12.5653 16.053 10.9378 16.6667 9.16699 16.6667C5.02486 16.6667 1.66699 13.3089 1.66699 9.16675C1.66699 5.02461 5.02486 1.66675 9.16699 1.66675C13.3091 1.66675 16.667 5.02461 16.667 9.16675C16.667 10.9376 16.0533 12.5651 15.0269 13.8482L18.0896 16.9108C18.415 17.2363 18.415 17.7639 18.0896 18.0893C17.7641 18.4148 17.2365 18.4148 16.9111 18.0893L13.8484 15.0267Z"
+                                                                                fill="#1E2134"></path>
+                                                                        </svg>
+                                                                        <svg width="20" height="20" version="1.1"
+                                                                            class="clear-icon"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                            x="0px" y="0px"
+                                                                            viewBox="0 0 460.775 460.775"
+                                                                            style="enable-background:new 0 0 460.775 460.775;"
+                                                                            xml:space="preserve">
+                                                                            <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+        c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+        c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+        c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+        l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+        c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                            <g>
+                                                                            </g>
+                                                                        </svg>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="app-name-address-info d-none">
+                                                    <div class="row custom-row--sm">
+                                                        <div class="col-md-4 col-12 field">
+                                                            <div
+                                                                class="form-group field-policyosgo-app_last_name has-success">
+                                                                <label class="control-label main-form-label"
+                                                                    for="policyosgo-app_last_name">Фамилия</label>
+                                                                <input type="text" id="policyosgo-app_last_name"
+                                                                    class="field__input form-control latin_letters_no_number"
+                                                                    name="PolicyOsgo[app_last_name]" readonly=""
+                                                                    maxlength="255"
+                                                                    oninput="this.value = this.value.toUpperCase()"
+                                                                    placeholder="Введите Фамилия" aria-invalid="false">
+
+                                                                <div class="help-block"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 col-12 field">
+                                                            <div
+                                                                class="form-group field-policyosgo-app_first_name has-success">
+                                                                <label class="control-label main-form-label"
+                                                                    for="policyosgo-app_first_name">Имя</label>
+                                                                <input type="text" id="policyosgo-app_first_name"
+                                                                    class="field__input form-control latin_letters_no_number"
+                                                                    name="PolicyOsgo[app_first_name]" readonly=""
+                                                                    maxlength="255"
+                                                                    oninput="this.value = this.value.toUpperCase()"
+                                                                    placeholder="Введите Имя" aria-invalid="false">
+
+                                                                <div class="help-block"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 col-12 field">
+                                                            <div
+                                                                class="form-group field-policyosgo-app_middle_name has-success">
+                                                                <label class="control-label main-form-label"
+                                                                    for="policyosgo-app_middle_name">Отчество</label>
+                                                                <input type="text" id="policyosgo-app_middle_name"
+                                                                    class="field__input form-control latin_letters_no_number"
+                                                                    name="PolicyOsgo[app_middle_name]" readonly=""
+                                                                    maxlength="255"
+                                                                    oninput="this.value = this.value.toUpperCase()"
+                                                                    placeholder="Введите Отчество" aria-invalid="false">
+
+                                                                <div class="help-block"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="driver-info" class="">
+                                                <div class="row custom-row--sm owner_is_driver-block d-none">
+                                                    <div class=" mt-5 mb-0">
+                                                        <div class="page-footer-button">
+                                                            <div class="form-group field-policyosgo-owner_is_driver">
+                                                                <input type="hidden" name="PolicyOsgo[owner_is_driver]"
+                                                                    value="0"><label><input type="checkbox"
+                                                                        id="policyosgo-owner_is_driver"
+                                                                        class="on-change-owner_is_driver primary-accent-color"
+                                                                        name="PolicyOsgo[owner_is_driver]" value="1">
+                                                                    Владелец транспортного средства также является
+                                                                    водителем</label>
+                                                                <div class="help-block"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="dynamicform_wrapper_driver"
+                                                    data-dynamicform="dynamicform_6cfc252a">
+                                                    <div class="container-items-driver">
+                                                        <!-- widgetContainer -->
+
+                                                    </div>
+                                                    <div class="pull-right- page-footer-button">
+                                                        <button type="button"
+                                                            class="add-item-driver btn btn-success btn-xs s-custom-btn s-custom-primary s-custom-btn--icon mt-5 mb-5">
+                                                            Добавить родственник </button>
+                                                    </div>
+                                                </div>
+                                                <div class="row custom-row--xs">
+                                                    <div class="col-md-6 col-6">
+                                                        <div class="form-group field-policyosgo-start_date">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-start_date">Дата начала</label>
+                                                            <input type="text" id="policyosgo-start_date"
+                                                                class="field__input form-control mask-date"
+                                                                name="PolicyOsgo[start_date]" value="10.06.2023"
+                                                                maxlength="10" autocomplete="off" min="2023-06-10"
+                                                                placeholder="дд.мм.гггг">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-6">
+                                                        <div class="form-group field-policyosgo-end_date">
+                                                            <label class="control-label main-form-label"
+                                                                for="policyosgo-end_date">Дата окончания</label>
+                                                            <input type="text" id="policyosgo-end_date"
+                                                                class="field__input  form-control mask-date disabled readonly"
+                                                                name="PolicyOsgo[end_date]" value="09.06.2024"
+                                                                readonly="" disabled="" maxlength="10"
+                                                                autocomplete="off" placeholder="дд.мм.гггг">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="calculator-card p-relative">
+
+                                <div class="overlay-right" style="display: none;">
+                                    <div class="spinner"></div>
+                                </div>
+                                <div class="main-title-sm text-uppercase">Результаты расчета</div>
+
+                                <div class="contact-us-page__info">
+
+                                    <div id="pjax_policy_osgo_calc_result" data-pjax-container=""
+                                        data-pjax-timeout="1000">
+
+                                        <div class="calculator-card__item">
+                                            <div class="calculator-card__label">
+                                                Транспортное средство </div>
+                                            <div class="calculator-card__value">
+                                                <span id="calc_vehicle_type_name">Легковые автомобили</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="calculator-card__item">
+                                            <div class="calculator-card__label">
+                                                Регион регистрации ТС </div>
+                                            <div class="calculator-card__value">
+                                                <span id="calc_region_name">Ферганский область</span>
+                                            </div>
+                                        </div>
+
+                                        <!--                    <div class="calculator-card__item">-->
+                                        <!--                        <div class="calculator-card__label">-->
+                                        <!--                            --> <!--                        </div>-->
+                                        <!--                        <div class="calculator-card__value">-->
+                                        <!--                            <span>-->
+                                        <!--</span>-->
+                                        <!--                        </div>-->
+                                        <!--                    </div>-->
+
+                                        <div class="calculator-card__item">
+                                            <div class="calculator-card__label">
+                                                Период страхования </div>
+                                            <div class="calculator-card__value">
+                                                <span>1 год</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="calculator-card__item policy_price-block">
+                                            <div class="calculator-card__label">
+                                                Стоимость полиса </div>
+                                            <div class="calculator-card__value">
+                                                <span id="policy_price">120 000</span>
+                                                <span class="currency">сўм</span>
+
+                                            </div>
+                                        </div>
+
+                                        <!--                    <div class="calculator-card__item">-->
+                                        <!--                        <div class="calculator-card__label">-->
+                                        <!--                            --> <!--                        </div>-->
+                                        <!--                        <div class="calculator-card__value">-->
+                                        <!--                            <span id="policy_gift_price">-->
+                                        <!--</span>-->
+                                        <!--                            <span class="currency">-->
+                                        <!--</span>-->
+                                        <!--                        </div>-->
+                                        <!--                    </div>-->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+
+                            <div id="submit-button" class="flex-column mt-3">
+
+                                <div class="page-footer-button mt-2">
+                                    <div class="form-group field-policyosgo-offer required">
+                                        <input type="hidden" name="PolicyOsgo[offer]" value="0"><label><input
+                                                type="checkbox" id="policyosgo-offer"
+                                                class="on-change-insurer primary-accent-color fs-3"
+                                                name="PolicyOsgo[offer]" value="1" aria-required="true"> Ознакомлен(а) и
+                                            согласен(а) с условиями <a href="/rule/osgo" data-pjax="0"
+                                                class="offer primary-color-text" type="button" data-toggle=""
+                                                data-target="#offerModal" target="_blank"><i>публичной
+                                                    оферты</i></a></label>
+                                        <div class="help-block"></div>
+                                    </div>
+                                </div>
+
+                                <div class="contact-us-page__left">
+
+                                    <div class="">
+                                        <div class="page-footer-button">
+                                            <div class="form-group">
+                                                <button type="submit"
+                                                    class="btn btn-success btn-sm-fluid btn-xs s-custom-btn s-custom-primary s-custom-btn--icon mt-5 btn btn-success submitForm mb-5"
+                                                    disabled="disabled">Перейти к просмотру</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-us-page__right right-calc-block ml-2">
+                                </div>
+                            </div>
+
+                            <input type="hidden" id="url_post_price_calc" value="/policy/osgo/calculate-price">
+                            <input type="hidden" id="url_post_tech_pass_data" value="/policy/osgo/get-tech-pass-data">
+                            <input type="hidden" id="url_post_pass_birthday"
+                                value="/policy/osgo/get-pass-birthday-data">
+                            <input type="hidden" id="label_driver" value="Родственник">
+                            <input type="hidden" id="label_add_driver_0" value="Добавить родственник">
+                            <input type="hidden" id="label_add_driver_1" value="Добавить водитель">
+
+                        </div>
+
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content py-5">
+    <div class="container">
+        <div class="row cards justify-content-center">
+            <div class="col-12 text-center pb-5">
+                <h1>Sugurta bolimi</h1>
+            </div>
+            {% for item in sugurta%}
+            <div class="col-12 col-md-11 col-lg-3 mt-4 mt-lg-0 m-2 border">
+                <div class="py-5 text-center">
+                    <img src="{{ item.image.url}}" class="img-fluid" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ item.title}}</h4>
+                        <p class="card-text">{{ item.description}}</p>
+                        <a href="/{{item.link_page }}" class="btn btn-outline-primary">Ro'yxatdan otkazish</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+</section>
+
+{% endblock%}

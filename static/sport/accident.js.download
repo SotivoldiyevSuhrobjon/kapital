@@ -1,0 +1,377 @@
+let url_post_price_calc = jQuery('#url_post_price_calc').val();
+let url_post_tech_pass_data = jQuery('#url_post_tech_pass_data').val();
+let url_post_pass_birthday = jQuery('#url_post_pass_birthday').val();
+
+$(function() {
+
+    var currentDate = new Date();
+    var driver_limit_id_cur = $('input[name="PolicyOsgo[driver_limit_id]"]:checked').val();
+    eighteenYearsAgo = currentDate.setFullYear(currentDate.getFullYear()-18);
+    hundredYearsAgo = currentDate.setFullYear(currentDate.getFullYear()-100);
+
+
+    if ($('body').find('#policyaccident-start_date')) {
+        var startDate = $('#policyaccident-start_date');
+        var endDate = $('#policyaccident-end_date');
+
+        startDate.datepicker({
+            autoHide: true,
+            startDate: new Date((new Date()).valueOf() + 1000*3600*24*1),
+            minDate: new Date((new Date()).valueOf() + 1000*3600*24*1),
+            endDate: new Date(new Date().setDate(new Date().getDate() + 30)),
+            maxDate: new Date(new Date().setDate(new Date().getDate() + 30)),
+            format: 'dd.mm.yyyy'
+        });
+        endDate.datepicker({
+            autoHide: true,
+            format: 'dd.mm.yyyy',
+            date: startDate.datepicker('getDate'),
+            startDate: startDate.datepicker('getDate')
+        });
+
+        startDate.on('changeDate', function () {
+            endDate.datepicker('setDate', startDate.datepicker('getDate'));
+            endDate.datepicker('setStartDate', startDate.datepicker('getDate'));
+            endDate.datepicker('setMinDate', startDate.datepicker('getDate'));
+            endDate.show();
+            startDate.hide();
+        });
+
+        var from;
+        var days;
+        var to;
+
+        function addDays(date, days) {
+            days--;
+            // console.log("date1");
+            // console.log(date);
+            var date_split = date.split(".");
+            // console.log("date_split");
+            // console.log(date_split);
+            var new_date = date_split[2]+"-"+date_split[1]+"-"+date_split[0];
+            // console.log("new_date");
+            // console.log(new_date);
+            var result = new Date(new_date);
+            // console.log("result1");
+            // console.log(result);
+            result.setDate(result.getDate() + Number(days));
+            // console.log("result2");
+            // console.log(result);
+            var year_curr = result.getFullYear();
+            var month_curr = result.getMonth()<9?'0'+(result.getMonth()+1):(result.getMonth()+1);
+            var date_cur = result.getDate()<10?'0'+result.getDate():result.getDate();
+            var full_date = date_cur+'.'+month_curr+'.'+year_curr;
+            // console.log("Full_date");
+            // console.log(full_date);
+            return full_date;
+        }
+
+        function subtractDays(strdate1, strdate2){
+            var date_split = strdate1.split(".");
+            var new_strdate1 = date_split[2]+"-"+date_split[1]+"-"+date_split[0];
+            const date1 = new Date(new_strdate1);
+            date_split = strdate2.split(".");
+            var new_strdate2 = date_split[2]+"-"+date_split[1]+"-"+date_split[0];
+            const date2 = new Date(new_strdate2);
+            const diffTime = Math.abs(date2 - date1);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            return diffDays+1;
+        }
+
+        $(document).on('change', "#policyaccident-start_date", function (e) {
+            from = e.target.value;
+            aggregated('FROM');
+        })
+        $(document).on('change', "#policyaccident-days", function (e) {
+            days = e.target.value;
+            aggregated('DAYS');
+        })
+        $(document).on('change', "#policyaccident-end_date", function (e) {
+            to = e.target.value;
+            aggregated('TO');
+        })
+
+        function aggregated(TARGET){
+            switch(TARGET){
+                case 'FROM':
+                    if(!days){
+                        days=365;
+                    }
+                    $('#policyaccident-days').val(days);
+                    $('#policyaccident-end_date').attr('min',from)
+                    $('#policyaccident-end_date').val(addDays(from, days))
+                    break;
+                case 'TO':
+                    if(!from)
+                        break;
+                    days = subtractDays(from, to);
+                    $('#policyaccident-end_date').attr('min',from)
+                    $("#policyaccident-days").val(days);
+                    break;
+                case 'DAYS':
+                    if(!from)
+                        break;
+                    // console.log(from,days)
+                    $('#policyaccident-end_date').attr('min',from)
+                    $('#policyaccident-end_date').val(addDays(from, days))
+                    break;
+            }
+        }
+
+    }
+
+    function _getCalc() {
+
+        var form = $('#policy-accident-form');
+        // return false if form still have some validation errors
+        if ((1))
+        {
+            overlay_right.show();
+            // submit form
+            $.ajax({
+                url    : url_post_price_calc,
+                type   : 'post',
+                data   : form.serialize(),
+                success: function (response)
+                {
+                    if (response.range_list) {
+                        price_range_array = response.range_list;
+                    }
+                    if (response.min) {
+                        $('#price-range').attr('min',response.min);
+                        let min_price = price_range_array[response.min];
+                        $('#min-range').html(min_price.toLocaleString('fr'));
+                    }
+                    if (response.max) {
+                        $('#price-range').attr('max',response.max);
+                        let max_price = price_range_array[response.max];
+                        $('#max-range').html(max_price.toLocaleString('fr'));
+                    }
+                    if (response.rate_id) {
+                        $('#price-range').val(response.rate_id);
+                    }
+
+                    let amount_uzs = response.prem;
+                    let policy_gift_price = response.sum;
+
+                    $('#range-input-price').val(amount_uzs.toLocaleString('fr'));
+                    $('#policy_price').html(amount_uzs.toLocaleString('fr'));
+                    $('#policy_gift_price').html(policy_gift_price.toLocaleString('fr'));
+                    $('.policy_price-block').removeClass('d-none');
+                    overlay_right.hide();
+                    return true;
+                },
+                error  : function ()
+                {
+                    overlay_right.hide();
+                    console.log('internal server error');
+                }
+            });
+        } else {
+            let amount_uzs = 0;
+            let amount_usd = 0;
+            let price = 0;
+            $('#policy_price').html(amount_uzs.toLocaleString('fr'));
+            return false;
+        }
+
+    }
+
+    $(document).on('change', '.get-calc-ajax', function(e) {
+        _getCalc();
+        return true;
+    })
+
+    if ($('body').find('#policyaccident-app_birthday')) {
+
+        var _insurer_birthday = $('#policyaccident-app_birthday');
+
+        _insurer_birthday.datepicker({
+            autoHide: true,
+            endDate: eighteenYearsAgo,
+            maxDate: eighteenYearsAgo,
+            format: 'dd.mm.yyyy'
+        });
+
+    }
+
+    function _getPassBirthdayData(birthday, pass_series, pass_number, driver_id = null) {
+
+        // return false if form still have some validation errors
+        if ((pass_series && pass_number && birthday))
+        {
+            overlay.show();
+            // submit form
+            $.ajax({
+                url    : url_post_pass_birthday,
+                type   : 'post',
+                data   : {csrfParam: csrfToken, pass_series: pass_series, pass_number: pass_number, birthday: birthday, driver_id: driver_id},
+                success: function (response)
+                {
+                    overlay.hide();
+                    console.log(response);
+                    if (response.ERROR > 0) {
+                        $.notify({
+                            // options
+                            // icon: 'bx bxs-info-circle',
+                            message: "<br>" + response.ERROR_MESSAGE,
+
+                        },{
+                            // settings
+                            element: 'body',
+                            position: null,
+                            type: "danger",
+                            allow_dismiss: true,
+                            newest_on_top: false,
+                            showProgressbar: false,
+                            placement: {
+                                from: "top",
+                                align: "center"
+                            },
+                            offset: 20,
+                            spacing: 10,
+                            z_index: 1031,
+                            delay: 5000,
+                            timer: 1000,
+                            url_target: '_blank',
+                            mouse_over: null,
+                            animate: {
+                                enter: 'animated fadeInDown',
+                                exit: 'animated fadeOutRight'
+                            },
+                            onShow: null,
+                            onShown: null,
+                            onClose: null,
+                            onClosed: null,
+                            icon_type: 'class',
+                        });
+                        /*alert(response.ERROR_MESSAGE);*/
+                    } else if ( (response.ERROR == 0) && response) {
+                        data = response;
+                        if (driver_id == null) {
+
+                            $('#policyaccident-app_birthday').attr('readonly', true);
+                            $('#policyaccident-app_pass_sery').attr('readonly', true);
+                            $('#policyaccident-app_pass_num').attr('readonly', true);
+
+                            $("#check-applicant").removeClass('check').addClass('clear');
+
+                            $('#policyaccident-app_last_name').val(data.LAST_NAME).attr('readonly', true).parent('div').removeClass('has-error').find('.help-block').html('');
+                            $('#policyaccident-app_first_name').val(data.FIRST_NAME).attr('readonly', true).parent('div').removeClass('has-error').find('.help-block').html('');
+                            $('#policyaccident-app_pinfl').val(data.PINFL).attr('readonly', true).parent('div').removeClass('has-error').find('.help-block').html('');
+                            $('#policyaccident-region_id').val(data.REGION_ID).attr('readonly', true).parent('div').removeClass('has-error').find('.help-block').html('');
+                            $('#district_id').val(data.DISTRICT_ID).attr('readonly', true).parent('div').removeClass('has-error').find('.help-block').html('');
+                            if (data.MIDDLE_NAME) {
+                                $('#policyaccident-app_middle_name').val(data.MIDDLE_NAME).attr('readonly', true).parent('div').removeClass('has-error').find('.help-block').html('');
+                            } else {
+                                $('#policyaccident-app_middle_name').removeAttr('readonly').parent('div').removeClass('has-error').find('.help-block').html('');
+                            }
+
+                            if (data.ADDRESS) {
+                                $('#policyaccident-app_address').val(data.ADDRESS).attr('readonly', true).parent('div').removeClass('has-error').find('.help-block').html('');
+                            } else {
+                                $('#policyaccident-app_address').removeAttr('readonly').parent('div').removeClass('has-error').find('.help-block').html('');
+                            }
+
+                            $('#policyaccident-app_phone').focus();
+
+                            $("#submit-button").removeClass('d-none');
+                        }
+
+                    }
+                },
+                error  : function ()
+                {
+                    overlay.hide();
+                    console.log('internal server error');
+                }
+            });
+        } else {
+            return false;
+        }
+
+    }
+
+    function hideInfoBlock(block = 'all'){
+        if (block == 'all') {
+            $(".pinfl-block").addClass('d-none');
+            $(".app-name-address-info").addClass('d-none');
+            $("#applicant-info").addClass('d-none');
+            $("#submit-button").addClass('d-none');
+        } else {
+            $(block).addClass('d-none');
+        }
+    }
+
+
+    // APPLICANT
+    $(document).on('click', '#check-applicant', function(e) {
+        if ($(this).hasClass('clear')) {
+            $('#policyaccident-app_birthday').val('').removeAttr('readonly').focus();
+            $('#policyaccident-app_pass_sery').val('').removeAttr('readonly');
+            $('#policyaccident-app_pass_num').val('').removeAttr('readonly').trigger('keyup');
+            $(this).addClass('check').removeClass('clear');
+        } else if ($(this).hasClass('check')) {
+            $('#policyaccident-app_birthday').datepicker('hide');
+            $('#policyaccident-app_pass_num').trigger('keyup');
+        }
+    })
+
+    $(document).on('keyup', '#policyaccident-app_birthday', function(e) {
+        let maxLength = $(this).attr('maxlength');
+        if ($(this).val().length >= maxLength) {
+            $(this).trigger('change');
+            $(this).datepicker('hide');
+            $('#policyaccident-app_pass_sery').focus();
+        }
+    })
+
+    $(document).on('keyup', '#policyaccident-app_pass_sery', function(e) {
+        let maxLength = $(this).attr('maxlength');
+        if ($(this).val().length >= maxLength) {
+            $('#policyaccident-app_pass_num').focus();
+        }
+    })
+
+    $(document).on('keyup', '.on-change-app-info', function(e) {
+        let app_birthday = $('#policyaccident-app_birthday');
+        let app_pass_sery = $('#policyaccident-app_pass_sery');
+        let app_pass_num = $('#policyaccident-app_pass_num');
+
+        let app_birthday_maxLength = app_birthday.attr('maxlength');
+        let app_pass_sery_maxLength = app_pass_sery.attr('maxlength');
+        let app_pass_num_maxLength = app_pass_num.attr('maxlength');
+        if (app_birthday.val().length >= app_birthday_maxLength && app_pass_sery.val().length >= app_pass_sery_maxLength && app_pass_num.val().length >= app_pass_num_maxLength) {
+            $(this).trigger('change');
+            _getPassBirthdayData(app_birthday.val(), app_pass_sery.val(), app_pass_num.val(), null);
+        } else {
+            $('#policyaccident-app_last_name').val('').removeAttr('readonly');
+            $('#policyaccident-app_first_name').val('').removeAttr('readonly');
+            $('#policyaccident-app_middle_name').val('').removeAttr('readonly');
+            $('#policyaccident-app_address').val('').removeAttr('readonly');
+        }
+    })
+
+    function checkAgree() {
+        if ($('#policyaccident-offer').prop('checked')) {
+            $('.submitFormOsgo').removeAttr('disabled')
+            return true;
+        } else {
+            $('.submitFormOsgo').attr('disabled',true)
+            return false;
+        }
+    }
+
+    checkAgree();
+
+    jQuery(document).on('change', '#policyaccident-offer', function (event) {
+        if ($(this).prop('checked')) {
+            $('.submitFormOsgo').removeAttr('disabled')
+        } else {
+            $('.submitFormOsgo').attr('disabled',true)
+        }
+    });
+
+    let isLoading = false;
+
+})

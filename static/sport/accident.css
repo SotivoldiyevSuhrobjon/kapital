@@ -1,0 +1,13 @@
+.form-group.field-policyosgo-vehicle_type_id.required {
+    max-width: 768px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+.min-form-field {
+    min-width: 480px;
+}
+.min-with-contain {
+    min-width: 600px;
+}

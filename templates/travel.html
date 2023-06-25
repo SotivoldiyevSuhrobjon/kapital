@@ -1,0 +1,921 @@
+{% extends 'includes/base.html'%}
+{% load static %}
+{% block title%}
+personal insurance
+{% endblock%}
+
+{% block content%}
+<section class="calculator-policy">
+    <div class="policy-osgo-create">
+        <div class="container">
+            <div class="flex-center-block contact-us-page__container my-3">
+
+
+                <div id="pjax_policy_travel_calc" data-pjax-container="" data-pjax-push-state=""
+                    data-pjax-timeout="1000">
+                    <form id="policy-travel-form" action="/policy/travel/calculate" method="post" data-pjax="">
+                        <input type="hidden" name="_csrf-frontend"
+                            value="Uu1scQzq_sQMBDbooSjG8laB3PEp7ozxfcNvH4OtVjQBlTk6btqmtkVxZMXSYpWIZvvkuUaA9L5Kii1a2p09ZQ==">
+                        <div class="row custom-row--lg mb-3 form__calc">
+                            <div class="col-lg-8 col-12">
+
+                                <div class="calculator-group">
+                                    <div class="row custom-row--sm">
+                                        <div class="col-12">
+                                            <h4 class="contact-us-page__label mb-0 text-bold">Детали путешествия</h4>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row custom-row--sm">
+                                                <div class="col-xl-5 col-lg-5 col-md-5 col-12">
+                                                    <div class="row custom-row--sm">
+                                                        <div class="col-12">
+
+                                                            <div
+                                                                class="form-group field-policytravel-_travelcountries required">
+                                                                <label class="control-label main-form-label"
+                                                                    for="policytravel-_travelcountries">Выберите страну
+                                                                    для путешествия (если будите в нескольких странах
+                                                                    выбирайте все)</label>
+                                                                <select id="policytravel-_travelcountries"
+                                                                    class="field__input form-control p-2">
+                                                                    <option>Davlatni tanlang</option>
+                                                                    <option value="1">АВСТРАЛИЯ</option>
+                                                                    <option value="2">АВСТРАЛИЯ</option>
+                                                                    <option value="3">АВСТРИЯ, ШЕНГЕН</option>
+                                                                    <option value="4">АЗЕРБАЙДЖАН</option>
+                                                                    <option value="5">АЛБАНИЯ</option>
+                                                                    <option value="6">АЛЖИР</option>
+                                                                    <option value="7">АНДОРРА</option>
+                                                                    <option value="8">АНТАРКТИКА</option>
+                                                                    <option value="9">АНТИГУА И БАРБУДА</option>
+                                                                    <option value="10">АРГЕНТИНА</option>
+                                                                    <option value="11">АРМЕНИЯ</option>
+                                                                    <option value="12">АРУБА</option>
+                                                                    <option value="13">АФГАНИСТАН</option>
+                                                                    <option value="14">БАГАМСКИЕ ОСТРОВА</option>
+                                                                    <option value="15">БАНГЛАДЕШ</option>
+                                                                    <option value="16">БАРБАДОС</option>
+                                                                    <option value="17">БАХРЕЙН</option>
+                                                                    <option value="18">БЕЛАРУСЬ</option>
+                                                                    <option value="19">БЕЛИЗ</option>
+                                                                    <option value="20">БЕЛЬГИЯ, ШЕНГЕН</option>
+                                                                    <option value="21">БЕНИН</option>
+                                                                    <option value="22">БЕРМУДСКИЕ ОСТРОВА</option>
+                                                                    <option value="23">БОЛГАРИЯ</option>
+                                                                    <option value="24">БОЛИВИЯ</option>
+                                                                    <option value="25">БОСНИЯ И ГЕРЦЕГОВИНА</option>
+                                                                    <option value="26">БОТСВАНА</option>
+                                                                    <option value="27">БРАЗИЛИЯ</option>
+                                                                    <option value="28">БРИТАНСКАЯ ТЕРРИТОРИЯ В ИНДИЙСКОМ
+                                                                        ОКЕАНЕ</option>
+                                                                    <option value="29">БРУНЕЙ-ДАРУССАЛАМ</option>
+                                                                    <option value="30">БУРКИНА-ФАСО</option>
+                                                                    <option value="31">БУРУНДИ</option>
+                                                                    <option value="32">БУТАН</option>
+                                                                    <option value="33">ВАНУАТУ</option>
+                                                                    <option value="34">ВАТИКАН, ГОСУДАРСТВО-ГОРОД
+                                                                    </option>
+                                                                    <option value="35">ВЕНГРИЯ, ШЕНГЕН</option>
+                                                                    <option value="36">ВЕНЕСУЭЛА</option>
+                                                                    <option value="37">ВИРГИНСКИЕ ОСТРОВА(БРИТАНСКИЕ)
+                                                                    </option>
+                                                                    <option value="38">ВИРГИНСКИЕ ОСТРОВА(США)</option>
+                                                                    <option value="39">ВОСТОЧНЫЙ ТИМОР</option>
+                                                                    <option value="40">ВЬЕТНАМ</option>
+                                                                    <option value="41">ГАБОН</option>
+                                                                    <option value="42">ГАИТИ</option>
+                                                                    <option value="43">ГАЙАНА</option>
+                                                                    <option value="44">ГАМБИЯ</option>
+                                                                    <option value="45">ГАНА</option>
+                                                                    <option value="46">ГВАДЕЛУПА</option>
+                                                                    <option value="47">ГВАТЕМАЛА</option>
+                                                                    <option value="48">ГВИНЕЯ</option>
+                                                                    <option value="49">ГВИНЕЯ-БИСАУ</option>
+                                                                    <option value="50">ГЕРМАНИЯ, ШЕНГЕН</option>
+                                                                    <option value="51">ГИБРАЛТАР</option>
+                                                                    <option value="52">ГОНДУРАС</option>
+                                                                    <option value="53">ГОНКОНГ</option>
+                                                                    <option value="54">ГРЕНАДА</option>
+                                                                    <option value="55">ГРЕНЛАНДИЯ</option>
+                                                                    <option value="56">ГРЕЦИЯ, ШЕНГЕН</option>
+                                                                    <option value="57">ГРУЗИЯ</option>
+                                                                    <option value="58">ГУАМ</option>
+                                                                    <option value="59">ДАНИЯ, ШЕНГЕН</option>
+                                                                    <option value="60">ДЖИБУТИ</option>
+                                                                    <option value="61">ДОМИНИКА</option>
+                                                                    <option value="62">ДОМИНИКАНСКАЯ РЕСПУБЛИКА</option>
+                                                                    <option value="63">ЕГИПЕТ</option>
+                                                                    <option value="64">ЗАМБИЯ</option>
+                                                                    <option value="65">ЗАПАДНАЯ САХАРА</option>
+                                                                    <option value="66">ЗИМБАБВЕ</option>
+                                                                    <option value="67">ИЗРАИЛЬ</option>
+                                                                    <option value="68">ИНДИЯ</option>
+                                                                    <option value="69">ИНДОНЕЗИЯ</option>
+                                                                    <option value="70">ИОРДАНИЯ</option>
+                                                                    <option value="71">ИРАК</option>
+                                                                    <option value="72">ИРЛАНДИЯ</option>
+                                                                    <option value="73">ИСЛАМСКАЯ РЕСПУБЛИКА ИРАН
+                                                                    </option>
+                                                                    <option value="74">ИСЛАНДИЯ, ШЕНГЕН</option>
+                                                                    <option value="75">ИСПАНИЯ, ШЕНГЕН</option>
+                                                                    <option value="76">ИТАЛИЯ, ШЕНГЕН</option>
+                                                                    <option value="77">ЙЕМЕН</option>
+                                                                    <option value="78">КАБО-ВЕРДЕ</option>
+                                                                    <option value="79">КАЗАХСТАН</option>
+                                                                    <option value="80">КАЙМАНОВЫ ОСТРОВА</option>
+                                                                    <option value="81">КАМБОДЖА</option>
+                                                                    <option value="82">КАМЕРУН</option>
+                                                                    <option value="83">КАНАДА</option>
+                                                                    <option value="84">КАТАР</option>
+                                                                    <option value="85">КЕНИЯ</option>
+                                                                    <option value="86">КИПР</option>
+                                                                    <option value="87">КИРИБАТИ</option>
+                                                                    <option value="88">КИТАЙ</option>
+                                                                    <option value="89">КОКОСОВЫЕ ОСТРОВА</option>
+                                                                    <option value="90">КОЛУМБИЯ</option>
+                                                                    <option value="91">КОМОРСКИЕ ОСТРОВА</option>
+                                                                    <option value="92">КОНГО</option>
+                                                                    <option value="93">КОРЕЙСКАЯ НАРОДНО-ДЕМОКРАТИЧЕСКАЯ
+                                                                        РЕСПУБЛИКА</option>
+                                                                    <option value="94">КОСТА-РИКА</option>
+                                                                    <option value="95">КОТ-Д`ИВУАР</option>
+                                                                    <option value="96">КУБА</option>
+                                                                    <option value="97">КУВЕЙТ</option>
+                                                                    <option value="98">КЫРГЫЗСТАН</option>
+                                                                    <option value="99">ЛАОССКАЯ НАРОДНО-ДЕМОКРАТИЧЕСКАЯ
+                                                                        РЕСПУБЛИКА</option>
+                                                                    <option value="100">ЛАТВИЯ, ШЕНГЕН</option>
+                                                                    <option value="101">ЛЕСОТО</option>
+                                                                    <option value="102">ЛИБЕРИЯ</option>
+                                                                    <option value="103">ЛИВАН</option>
+                                                                    <option value="104">ЛИВИЙСКАЯ АРАБСКАЯ ДЖАМАХИРИЯ
+                                                                    </option>
+                                                                    <option value="105">ЛИТВА, ШЕНГЕН</option>
+                                                                    <option value="106">ЛИХТЕНШТЕЙН, ШЕНГЕН</option>
+                                                                    <option value="107">ЛЮКСЕМБУРГ, ШЕНГЕН</option>
+                                                                    <option value="108">МАВРИКИЙ</option>
+                                                                    <option value="109">МАВРИТАНИЯ</option>
+                                                                    <option value="110">МАДАГАСКАР</option>
+                                                                    <option value="111">МАЙОТТА</option>
+                                                                    <option value="112">МАКАО</option>
+                                                                    <option value="113">МАКЕДОНИЯ</option>
+                                                                    <option value="114">МАЛАВИ</option>
+                                                                    <option value="115">МАЛАЙЗИЯ</option>
+                                                                    <option value="116">МАЛИ</option>
+                                                                    <option value="117">МАЛЫЕ ОСТРОВНЫЕ ТЕРРИТОРИИ США
+                                                                    </option>
+                                                                    <option value="118">МАЛЬДИВЫ</option>
+                                                                    <option value="119">МАЛЬТА, ШЕНГЕН</option>
+                                                                    <option value="120">МАРОККО</option>
+                                                                    <option value="121">МАРТИНИКА</option>
+                                                                    <option value="122">МАРШАЛЛОВЫ ОСТРОВА</option>
+                                                                    <option value="123">МЕКСИКА</option>
+                                                                    <option value="124">МИКРОНЕЗИЯ, ФЕДЕРАТИВНЫЕ ШТАТЫ
+                                                                    </option>
+                                                                    <option value="125">МОЗАМБИК</option>
+                                                                    <option value="126">МОНАКО</option>
+                                                                    <option value="127">МОНГОЛИЯ</option>
+                                                                    <option value="128">МОНТСЕРРАТ</option>
+                                                                    <option value="129">МЬЯНМА</option>
+                                                                    <option value="130">НАМИБИЯ</option>
+                                                                    <option value="131">НАРОДНАЯ РЕСПУБЛИКА АНГОЛА
+                                                                    </option>
+                                                                    <option value="132">НАУРУ</option>
+                                                                    <option value="133">НЕПАЛ</option>
+                                                                    <option value="134">НИГЕР</option>
+                                                                    <option value="135">НИГЕРИЯ</option>
+                                                                    <option value="136">НИДЕРЛАНДСКИЕ АНТИЛЬСКИЕ ОСТРОВА
+                                                                    </option>
+                                                                    <option value="137">НИДЕРЛАНДЫ, ШЕНГЕН</option>
+                                                                    <option value="138">НИКАРАГУА</option>
+                                                                    <option value="139">НИУЭ</option>
+                                                                    <option value="140">НОВАЯ ЗЕЛАНДИЯ</option>
+                                                                    <option value="141">НОВАЯ КАЛЕДОНИЯ</option>
+                                                                    <option value="142">НОРВЕГИЯ, ШЕНГЕН</option>
+                                                                    <option value="143">ОБЪЕДИНЕННАЯ РЕСПУБЛИКА ТАНЗАНИЯ
+                                                                    </option>
+                                                                    <option value="144">ОБЪЕДИНЕННЫЕ АРАБСКИЕ ЭМИРАТЫ
+                                                                    </option>
+                                                                    <option value="145">ОМАН</option>
+                                                                    <option value="149">ОСТРОВА КУКА</option>
+                                                                    <option value="150">ОСТРОВА ТЕРКС И КАЙКОС</option>
+                                                                    <option value="151">ОСТРОВА УОЛЛИС И ФУТУНА</option>
+                                                                    <option value="146">ОСТРОВ БУВЕ</option>
+                                                                    <option value="147">ОСТРОВ НОРФОЛК</option>
+                                                                    <option value="148">ОСТРОВ СВЯТОЙ ЕЛЕНЫ</option>
+                                                                    <option value="152">ПАКИСТАН</option>
+                                                                    <option value="153">ПАЛАУ</option>
+                                                                    <option value="154">ПАНАМА</option>
+                                                                    <option value="155">ПАПУА НОВАЯ ГВИНЕЯ</option>
+                                                                    <option value="156">ПАПУА-НОВАЯ ГВИНЕЯ</option>
+                                                                    <option value="157">ПАРАГВАЙ</option>
+                                                                    <option value="158">ПЕРУ</option>
+                                                                    <option value="159">ПИТКЭРН</option>
+                                                                    <option value="160">ПОЛЬША, ШЕНГЕН</option>
+                                                                    <option value="161">ПОРТУГАЛИЯ, ШЕНГЕН</option>
+                                                                    <option value="162">ПУЭРТО-РИКО</option>
+                                                                    <option value="163">РЕСПУБЛИКА ЗАИР</option>
+                                                                    <option value="164">РЕСПУБЛИКА КОРЕЯ</option>
+                                                                    <option value="165">РЕСПУБЛИКА МОЛДОВА</option>
+                                                                    <option value="166">РЕСПУБЛИКА ЭКВАТОРИАЛЬНАЯ ГВИНЕЯ
+                                                                    </option>
+                                                                    <option value="167">РЕЮНЬОН</option>
+                                                                    <option value="168">РОССИЙСКАЯ ФЕДЕРАЦИЯ</option>
+                                                                    <option value="169">РУАНДА</option>
+                                                                    <option value="170">РУМЫНИЯ</option>
+                                                                    <option value="171">САМОА</option>
+                                                                    <option value="172">САН-МАРИНО</option>
+                                                                    <option value="173">САН-ТОМЕ И ПРИНСИПИ</option>
+                                                                    <option value="174">САУДОВСКАЯ АРАВИЯ</option>
+                                                                    <option value="175">СВАЗИЛЕНД</option>
+                                                                    <option value="176">СЕВЕРНЫЕ МАРИАНСКИЕ ОСТРОВА
+                                                                    </option>
+                                                                    <option value="177">СЕЙШЕЛЬСКИЕ ОСТРОВА</option>
+                                                                    <option value="178">СЕНЕГАЛ</option>
+                                                                    <option value="179">СЕНТ-ВИНСЕНТ И ГРЕНАДИНЫ
+                                                                    </option>
+                                                                    <option value="180">СЕНТ-КИТС И НЕВИС</option>
+                                                                    <option value="181">СЕНТ-ЛЮСИЯ</option>
+                                                                    <option value="182">СЕНТ-ПЬЕР И МИКЕЛОН</option>
+                                                                    <option value="183">СЕРБИЯ</option>
+                                                                    <option value="184">СИНГАПУР</option>
+                                                                    <option value="185">СИРИЙСКАЯ АРАБСКАЯ РЕСПУБЛИКА
+                                                                    </option>
+                                                                    <option value="186">СЛОВАКИЯ, ШЕНГЕН</option>
+                                                                    <option value="187">СЛОВЕНИЯ, ШЕНГЕН</option>
+                                                                    <option value="189">СОЕДИНЕННОЕ КОРОЛЕВСТВО
+                                                                        ВЕЛИКОБРИТАНИЯ И СЕВЕРНАЯ ИРЛАНДИЯ</option>
+                                                                    <option value="188">СОЕДИНЁННЫЕ ШТАТЫ АМЕРИКИ
+                                                                    </option>
+                                                                    <option value="190">СОЛОМОНОВЫ ОСТРОВА</option>
+                                                                    <option value="191">СОМАЛИ</option>
+                                                                    <option value="192">СУДАН</option>
+                                                                    <option value="193">СУРИНАМ</option>
+                                                                    <option value="194">СЬЕРРА-ЛЕОНЕ</option>
+                                                                    <option value="195">ТАДЖИКИСТАН</option>
+                                                                    <option value="196">ТАИЛАНД</option>
+                                                                    <option value="197">ТАЙВАНЬ</option>
+                                                                    <option value="198">ТОГО</option>
+                                                                    <option value="199">ТОКЕЛАУ</option>
+                                                                    <option value="200">ТОНГА</option>
+                                                                    <option value="201">ТРИНИДАД И ТОБАГО</option>
+                                                                    <option value="202">ТУВАЛУ</option>
+                                                                    <option value="203">ТУНИС</option>
+                                                                    <option value="204">ТУРКМЕНИСТАН</option>
+                                                                    <option value="205">ТУРЦИЯ</option>
+                                                                    <option value="206">УГАНДА</option>
+                                                                    <option value="207">УКРАИНА</option>
+                                                                    <option value="208">УРУГВАЙ</option>
+                                                                    <option value="209">ФАРЕРСКИЕ ОСТРОВА</option>
+                                                                    <option value="210">ФИДЖИ</option>
+                                                                    <option value="211">ФИЛИППИНЫ</option>
+                                                                    <option value="212">ФИНЛЯНДИЯ, ШЕНГЕН</option>
+                                                                    <option value="213">ФОЛКЛЕНДСКИЕ ОСТРОВА</option>
+                                                                    <option value="214">ФРАНЦИЯ, ШЕНГЕН</option>
+                                                                    <option value="215">ХОРВАТИЯ</option>
+                                                                    <option value="216">ЦЕНТРАЛЬНОАФРИКАНСКАЯ РЕСПУБЛИКА
+                                                                    </option>
+                                                                    <option value="217">ЧЕШСКАЯ РЕСПУБЛИКА, ШЕНГЕН
+                                                                    </option>
+                                                                    <option value="218">ЧИЛИ</option>
+                                                                    <option value="219">ШВЕЙЦАРИЯ, ШЕНГЕН</option>
+                                                                    <option value="220">ШВЕЦИЯ, ШЕНГЕН</option>
+                                                                    <option value="221">ШЕНГЕН</option>
+                                                                    <option value="222">ШРИ-ЛАНКА</option>
+                                                                    <option value="223">ЭКВАДОР</option>
+                                                                    <option value="224">ЭСТОНИЯ, ШЕНГЕН</option>
+                                                                    <option value="225">ЭФИОПИЯ</option>
+                                                                    <option value="226">ЮГОСЛАВИЯ</option>
+                                                                    <option value="227">ЯМАЙКА</option>
+                                                                    <option value="228">ЯПОНИЯ</option>
+                                                                </select>
+
+                                                                <div class="help-block"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-xl-7 col-lg-7 col-md-7 col-12">
+
+                                                    <div class="row custom-row--sm">
+                                                        <div class=" col-12">
+                                                            <div class="form-group field-policytravel-abroad_type_id">
+                                                                <label class="control-label main-form-label"
+                                                                    for="policytravel-abroad_type_id">Тип полиса</label>
+                                                                <select id="policytravel-abroad_type_id"
+                                                                    class="field__input form-control on-change"
+                                                                    name="PolicyTravel[abroad_type_id]" size="1"
+                                                                    maximumselectionlength="1" required>
+                                                                    <option value="">Выберите</option>
+                                                                    <option value="1" selected="">Oднократное
+                                                                        путешествие</option>
+                                                                    <option value="2">Mногократные путешествия</option>
+                                                                </select>
+
+                                                                <div class="help-block"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row custom-row--sm">
+                                                <div class="col-12">
+                                                </div>
+                                            </div>
+                                            <div class="row custom-row--sm">
+                                                <div class="col-sm-4 col-12">
+                                                    <div class="form-group field-policytravel-start_date required">
+                                                        <label class="control-label main-form-label"
+                                                            for="policytravel-start_date">Дата начала</label>
+                                                        <input type="date" id="policytravel-start_date"
+                                                            class="form-control on-change mask-date" required
+                                                            name="PolicyTravel[start_date]" maxlength="10"
+                                                            autocomplete="off" min="2023-06-08" placeholder="дд.мм.гггг"
+                                                            aria-required="true">
+
+                                                        <div class="help-block"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4 col-12">
+                                                    <div class="form-group field-policytravel-end_date required">
+                                                        <label class="control-label main-form-label"
+                                                            for="policytravel-end_date">Дата окончания</label>
+                                                        <input type="date" id="policytravel-end_date"
+                                                            class="form-control on-change mask-date" required
+                                                            name="PolicyTravel[end_date]" maxlength="10"
+                                                            autocomplete="off" placeholder="дд.мм.гггг"
+                                                            aria-required="true">
+
+                                                        <div class="help-block"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4 col-12">
+                                                    <div class="form-group field-policytravel-days required">
+                                                        <label class="control-label main-form-label"
+                                                            for="policytravel-days">Дни</label>
+                                                        <input type="number" id="policytravel-days" required
+                                                            class="form-control on-change" name="PolicyTravel[days]"
+                                                            maxlength="3" autocomplete="off" placeholder="Введите Дни"
+                                                            aria-required="true">
+
+                                                        <div class="help-block"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row custom-row--sm">
+                                                <div class="col-12">
+                                                    <div class="form-group field-policytravel-purpose_id required">
+                                                        <label class="control-label main-form-label">Цель
+                                                            поездки</label>
+                                                        <input type="hidden" name="PolicyTravel[purpose_id]" value="">
+                                                        <div id="policytravel-purpose_id"
+                                                            class="form-control on-change form-custom d-flex flex-wrap gy-1"
+                                                            role="radiogroup" aria-required="true" required>
+                                                            <div class="pretty p-default p-round p-smooth"><input
+                                                                    class="mr-1 primary-accent-color" type="radio"
+                                                                    name="PolicyTravel[purpose_id]" value="1"><i
+                                                                    class="ml-05"></i>
+                                                                <div class="state p-warning-o"><label
+                                                                        class="checkbox mr-4 position-relative">Туризм /
+                                                                        Служебная командировка</label></div>
+                                                            </div>
+                                                            <div class="pretty p-default p-round p-smooth"><input
+                                                                    class="mr-1 primary-accent-color" type="radio"
+                                                                    name="PolicyTravel[purpose_id]" value="3"><i
+                                                                    class="ml-05"></i>
+                                                                <div class="state p-warning-o"><label
+                                                                        class="checkbox mr-4 position-relative">Работа
+                                                                        (Физический труд)</label></div>
+                                                            </div>
+                                                            <div class="pretty p-default p-round p-smooth"><input
+                                                                    class="mr-1 primary-accent-color" type="radio"
+                                                                    name="PolicyTravel[purpose_id]" value="4"><i
+                                                                    class="ml-05"></i>
+                                                                <div class="state p-warning-o"><label
+                                                                        class="checkbox mr-4 position-relative">Спорт</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="pretty p-default p-round p-smooth"><input
+                                                                    class="mr-1 primary-accent-color" type="radio"
+                                                                    name="PolicyTravel[purpose_id]" value="2"><i
+                                                                    class="ml-05"></i>
+                                                                <div class="state p-warning-o"><label
+                                                                        class="checkbox mr-4 position-relative">Учёба</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="help-block"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="programs-block">
+                                                <div class="field modal__field">
+                                                </div>
+
+
+                                                <input type="hidden" id="policytravel-is_family"
+                                                    name="PolicyTravel[is_family]">
+                                                <hr class="hr-primary my-3">
+
+                                                <h3 class="contact-us-page__label my-2 text-bold">Информация о
+                                                    страхователе</h3>
+
+                                                <div class="row custom-row--sm align-start">
+                                                    <div class="col-md-6 col-12">
+                                                        <div
+                                                            class="form-group field-policytravel-app_birthday required">
+                                                            <label class="control-label main-form-label"
+                                                                for="policytravel-app_birthday">Дата рождения</label>
+                                                            <input type="date" id="policytravel-app_birthday"
+                                                                class="field__input form-control mask-birthday app_birthday on-change-app-info"
+                                                                name="PolicyTravel[app_birthday]" autocomplete="off"
+                                                                placeholder="дд.мм.гггг" aria-required="true"
+                                                                maxlength="10">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12">
+                                                        <div
+                                                            class="row custom-row--sm align-start justify-space-between">
+                                                            <div
+                                                                class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4 series-two-things">
+                                                                <div
+                                                                    class="form-group field-policytravel-app_pass_sery required">
+                                                                    <label
+                                                                        class="control-label d-block w-100 overflow-visible visible ws-nowrap main-form-label"
+                                                                        for="policytravel-app_pass_sery">Серия и номер
+                                                                        ID/Паспорта</label>
+                                                                    <input type="text" id="policytravel-app_pass_sery"
+                                                                        class="field__input form-control on-change-app-info"
+                                                                        name="PolicyTravel[app_pass_sery]" maxlength="2"
+                                                                        autocomplete="off"
+                                                                        oninput="this.value = this.value.toUpperCase()"
+                                                                        placeholder="AA" aria-required="true">
+
+                                                                    <div class="help-block"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="col-xl-5 col-lg-5 col-md-5 col-sm-6 col-6 series-num-middle">
+                                                                <!--series-two-things-right-auto"-->
+                                                                <div
+                                                                    class="form-group field-policytravel-app_pass_num required">
+                                                                    <label
+                                                                        class="control-label invisible main-form-label"
+                                                                        for="policytravel-app_pass_num">Номер
+                                                                        паспорта</label>
+                                                                    <input type="text" id="policytravel-app_pass_num"
+                                                                        class="field__input form-control only_number on-change-app-info"
+                                                                        name="PolicyTravel[app_pass_num]" maxlength="7"
+                                                                        placeholder="0000001" aria-required="true">
+
+                                                                    <div class="help-block"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 btn-series">
+                                                                <label class="invisible main-form-label">hide</label>
+                                                                <button type="button" id="check-applicant"
+                                                                    class="anketa__check s-custom-btn s-custom-primary ms-auto btn--md s-custom-btn--icon text-capitalize check-button btn check">
+                                                                    <svg width="20" height="20" viewBox="0 0 20 20"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                                        class="check-icon">
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                            d="M3.33366 9.16675C3.33366 5.94509 5.94533 3.33341 9.16699 3.33341C12.3887 3.33341 15.0003 5.94509 15.0003 9.16675C15.0003 10.7384 14.3788 12.1648 13.3682 13.2137C13.3396 13.2357 13.3122 13.2597 13.2861 13.2858C13.2599 13.312 13.2359 13.3394 13.214 13.3679C12.1651 14.3786 10.7386 15.0001 9.16699 15.0001C5.94533 15.0001 3.33366 12.3884 3.33366 9.16675ZM13.8484 15.0267C12.5653 16.053 10.9378 16.6667 9.16699 16.6667C5.02486 16.6667 1.66699 13.3089 1.66699 9.16675C1.66699 5.02461 5.02486 1.66675 9.16699 1.66675C13.3091 1.66675 16.667 5.02461 16.667 9.16675C16.667 10.9376 16.0533 12.5651 15.0269 13.8482L18.0896 16.9108C18.415 17.2363 18.415 17.7639 18.0896 18.0893C17.7641 18.4148 17.2365 18.4148 16.9111 18.0893L13.8484 15.0267Z"
+                                                                            fill="#1E2134"></path>
+                                                                    </svg>
+                                                                    <svg width="20" height="20" version="1.1"
+                                                                        class="clear-icon"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                        x="0px" y="0px" viewBox="0 0 460.775 460.775"
+                                                                        style="enable-background:new 0 0 460.775 460.775;"
+                                                                        xml:space="preserve">
+                                                                        <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+                                                            c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+                                                            c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+                                                            c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+                                                            l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+                                                            c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                        <g></g>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row custom-row--sm">
+                                                    <div class="col-md-6 col-12 field">
+                                                        <div class="form-group field-policytravel-app_name required">
+                                                            <label class="control-label main-form-label"
+                                                                for="policytravel-app_name">Имя</label>
+                                                            <input type="text" id="policytravel-app_name" required
+                                                                class="field__input form-control latin_letters_no_number on-change-insurer"
+                                                                name="PolicyTravel[app_name]" maxlength="255"
+                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                placeholder="Введите Имя" aria-required="true">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12 field">
+                                                        <div class="form-group field-policytravel-app_surname required">
+                                                            <label class="control-label main-form-label"
+                                                                for="policytravel-app_surname">Фамилия</label>
+                                                            <input type="text" id="policytravel-app_surname" required
+                                                                class="field__input form-control latin_letters_no_number on-change-insurer"
+                                                                name="PolicyTravel[app_surname]"
+                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                placeholder="Введите Фамилия" aria-required="true">
+
+                                                            <div class="help-block"></div>
+                                                        </div> <input type="hidden" id="policytravel-app_pinfl"
+                                                            name="PolicyTravel[app_pinfl]">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row custom-row--sm">
+                                                    <div class="col-md-6 col-12 field">
+                                                        <div class="form-group field-policytravel-app_address required">
+                                                            <label class="control-label main-form-label"
+                                                                for="policytravel-app_address">Адрес</label>
+                                                            <input type="text" id="policytravel-app_address" required
+                                                                class="form-control" name="PolicyTravel[app_address]"
+                                                                maxlength="255"
+                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                placeholder="Введите Адрес" aria-required="true">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-12 field">
+                                                        <div class="form-group field-policytravel-app_phone required">
+                                                            <label class="control-label main-form-label"
+                                                                for="policytravel-app_phone">Номер телефона</label>
+                                                            <input type="tel" id="policytravel-app_phone"
+                                                                class="field__input field--mask form-control mask-phone"
+                                                                name="PolicyTravel[app_phone]" value="+998"
+                                                                maxlength="19" placeholder="+998XX-XXX-XX-XX"
+                                                                aria-required="true">
+
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row custom-row--sm">
+                                                    <div class="col-12 field">
+                                                        <div class="form-group field-policytravel-also_traveller">
+                                                            <input type="hidden" name="PolicyTravel[also_traveller]"
+                                                                value="0"><label><input type="checkbox"
+                                                                    id="policytravel-also_traveller"
+                                                                    class="on-change-insurer fs-3 primary-accent-color"
+                                                                    name="PolicyTravel[also_traveller]" value="1"
+                                                                    checked=""> Я тоже путешественник</label>
+                                                            <div class="help-block"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <hr class="hr-primary my-3">
+
+                                                <div class="dynamicform_wrapper"
+                                                    data-dynamicform="dynamicform_25edd415">
+                                                    <div class="container-items"><!-- widgetContainer -->
+                                                        <div class="item panel panel-default"><!-- widgetBody -->
+                                                            <div class="panel-heading p-relative my-2">
+                                                                <h3
+                                                                    class="panel-title pull-left panel-title-birthday contact-us-page__label">
+                                                                    Путешественник <span class="index">1</span></h3>
+                                                                <div class="pull-right page-footer-button">
+                                                                    <button type="button"
+                                                                        class="remove-item btn btn-danger btn-xs">
+                                                                        <i class="bx bxs-user-x bx-sm"></i>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                            </div>
+                                                            <div class="panel-body">
+                                                                <input type="hidden" id="policytraveltraveller-0-pinfl"
+                                                                    name="PolicyTravelTraveller[0][pinfl]">
+                                                                <div class="row custom-row--sm align-start">
+                                                                    <div class="col-md-6 col-12">
+                                                                        <div
+                                                                            class="form-group field-policytraveltraveller-0-birthday required">
+                                                                            <label class="control-label main-form-label"
+                                                                                for="policytraveltraveller-0-birthday">Дата
+                                                                                рождения</label>
+                                                                            <input type="text"
+                                                                                id="policytraveltraveller-0-birthday"
+                                                                                class="field__input form-control mask-birthday traveller-birthday on-change on-change-traveller-info dd-with"
+                                                                                name="PolicyTravelTraveller[0][birthday]"
+                                                                                maxlength="10" autocomplete="off"
+                                                                                data-param="travel"
+                                                                                placeholder="дд.мм.гггг"
+                                                                                aria-required="true"
+                                                                                readonly="readonly">
+
+                                                                            <div class="help-block"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-12">
+                                                                        <div
+                                                                            class="row custom-row--sm align-start justify-space-between">
+                                                                            <div
+                                                                                class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 series-two-things">
+                                                                                <div
+                                                                                    class="form-group field-policytraveltraveller-0-pass_sery required">
+                                                                                    <label
+                                                                                        class="control-label d-block w-100 overflow-visible visible ws-nowrap main-form-label"
+                                                                                        for="policytraveltraveller-0-pass_sery">Красный
+                                                                                        паспортный номер серии</label>
+                                                                                    <input type="text"
+                                                                                        id="policytraveltraveller-0-pass_sery"
+                                                                                        class="field__input form-control on-change-traveller-info"
+                                                                                        name="PolicyTravelTraveller[0][pass_sery]"
+                                                                                        maxlength="2" autocomplete="off"
+                                                                                        data-param="travel"
+                                                                                        oninput="this.value = this.value.toUpperCase()"
+                                                                                        placeholder="FA"
+                                                                                        aria-required="true"
+                                                                                        readonly="readonly">
+
+                                                                                    <div class="help-block"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 series-num-middle">
+                                                                                <!--series-two-things-right-auto"-->
+                                                                                <div
+                                                                                    class="form-group field-policytraveltraveller-0-pass_num required">
+                                                                                    <label
+                                                                                        class="control-label invisible main-form-label"
+                                                                                        for="policytraveltraveller-0-pass_num">Номер
+                                                                                        паспорта</label>
+                                                                                    <input type="text"
+                                                                                        id="policytraveltraveller-0-pass_num"
+                                                                                        class="field__input form-control only_number on-change-traveller-info"
+                                                                                        name="PolicyTravelTraveller[0][pass_num]"
+                                                                                        maxlength="7"
+                                                                                        data-param="travel"
+                                                                                        placeholder="0000001"
+                                                                                        aria-required="true"
+                                                                                        readonly="readonly">
+
+                                                                                    <div class="help-block"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div
+                                                                                class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 btn-series">
+                                                                                <label
+                                                                                    class="invisible main-form-label">hide</label>
+                                                                                <button type="button"
+                                                                                    class="check-traveller check-button btn anketa__check s-custom-btn s-custom-primary ms-auto btn--md s-custom-btn--icon text-capitalize check-travel-index-0  btn check"
+                                                                                    data-index="0" data-param="travel">
+                                                                                    <svg width="20" height="20"
+                                                                                        viewBox="0 0 20 20" fill="none"
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        class="check-icon">
+                                                                                        <path fill-rule="evenodd"
+                                                                                            clip-rule="evenodd"
+                                                                                            d="M3.33366 9.16675C3.33366 5.94509 5.94533 3.33341 9.16699 3.33341C12.3887 3.33341 15.0003 5.94509 15.0003 9.16675C15.0003 10.7384 14.3788 12.1648 13.3682 13.2137C13.3396 13.2357 13.3122 13.2597 13.2861 13.2858C13.2599 13.312 13.2359 13.3394 13.214 13.3679C12.1651 14.3786 10.7386 15.0001 9.16699 15.0001C5.94533 15.0001 3.33366 12.3884 3.33366 9.16675ZM13.8484 15.0267C12.5653 16.053 10.9378 16.6667 9.16699 16.6667C5.02486 16.6667 1.66699 13.3089 1.66699 9.16675C1.66699 5.02461 5.02486 1.66675 9.16699 1.66675C13.3091 1.66675 16.667 5.02461 16.667 9.16675C16.667 10.9376 16.0533 12.5651 15.0269 13.8482L18.0896 16.9108C18.415 17.2363 18.415 17.7639 18.0896 18.0893C17.7641 18.4148 17.2365 18.4148 16.9111 18.0893L13.8484 15.0267Z"
+                                                                                            fill="#1E2134"></path>
+                                                                                    </svg>
+                                                                                    <svg width="20" height="20"
+                                                                                        version="1.1"
+                                                                                        class="clear-icon "
+                                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                                        x="0px" y="0px"
+                                                                                        viewBox="0 0 460.775 460.775"
+                                                                                        style="enable-background:new 0 0 460.775 460.775;"
+                                                                                        xml:space="preserve">
+                                                                                        <path
+                                                                                            d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+                                                                            c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+                                                                            c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+                                                                            c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+                                                                            l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+                                                                            c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z">
+                                                                                        </path>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                        <g></g>
+                                                                                    </svg>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row custom-row--sm">
+                                                                    <div class="col-md-6 col-12 field">
+                                                                        <div
+                                                                            class="form-group field-policytraveltraveller-0-first_name required">
+                                                                            <label class="control-label main-form-label"
+                                                                                for="policytraveltraveller-0-first_name">Имя</label>
+                                                                            <input type="text" required
+                                                                                id="policytraveltraveller-0-first_name"
+                                                                                class="field__input form-control latin_letters_no_number"
+                                                                                name="PolicyTravelTraveller[0][first_name]"
+                                                                                maxlength="255"
+                                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                                placeholder="Введите Имя"
+                                                                                aria-required="true"
+                                                                                readonly="readonly">
+
+                                                                            <div class="help-block"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-12 field">
+                                                                        <div
+                                                                            class="form-group field-policytraveltraveller-0-surname required">
+                                                                            <label class="control-label main-form-label"
+                                                                                for="policytraveltraveller-0-surname">Фамилия</label>
+                                                                            <input type="text" required
+                                                                                id="policytraveltraveller-0-surname"
+                                                                                class="field__input form-control latin_letters_no_number"
+                                                                                name="PolicyTravelTraveller[0][surname]"
+                                                                                maxlength="255"
+                                                                                oninput="this.value = this.value.toUpperCase()"
+                                                                                placeholder="Введите Фамилия"
+                                                                                aria-required="true"
+                                                                                readonly="readonly">
+
+                                                                            <div class="help-block"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="pull-right-page-footer-button">
+                                                        <button type="button"
+                                                            class="add-item  btn btn-success btn-xs s-custom-btn s-custom-primary s-custom-btn--icon mt-5 mb-5">Добавить
+                                                            путешественника</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-4 col-12">
+                                <div class="calculator-card p-relative">
+                                    <div class="overlay-right" style="display: none;">
+                                        <div class="spinner"></div>
+                                    </div>
+                                    <div class="main-title-sm text-uppercase">Результаты расчета</div>
+
+                                    <div class="contact-us-page__info">
+
+                                        <div id="pjax_policy_travel_calc_result" data-pjax-container=""
+                                            data-pjax-timeout="1000">
+                                            <div class="calculator-card__item policy_price-block">
+                                                <div class="calculator-card__label">
+                                                    Стоимость полиса </div>
+                                                <div class="calculator-card__value">
+                                                    <span id="policy_price">0.00</span>
+                                                    <span class="currency">UZS</span>
+
+                                                </div>
+                                                <div class="calculator-card__value small">
+                                                    <span id="policy_price"><small>0.00</small></span>
+                                                    <span class="currency"><small>USD</small></span>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="calculator-card__item policy_price-block">
+                                                <div class="calculator-card__label">
+                                                    Суғурта суммаси </div>
+                                                <div class="calculator-card__value">
+                                                    <span id="policy_gift_price">0.00</span>
+                                                    <span class="currency">EUR</span>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex-row">
+                            <div class="contact-us-page__left fs-4">
+
+                                <div class="field modal__field">
+                                    <div class="page-footer-button mt-2">
+                                        <div class="form-group field-policytravel-offer">
+                                            <input type="hidden" name="PolicyTravel[offer]" value="0"><label><input
+                                                    required type="checkbox" id="policytravel-offer"
+                                                    class="primary-accent-color" name="PolicyTravel[offer]" value="1">
+                                                Ознакомлен(а) и согласен(а) с
+                                                условиями <a href="/rule/tr" data-pjax="0"
+                                                    class="offer primary-color-text" type="button" data-toggle=""
+                                                    data-target="#offerModal" target="_blank"><i>публичной
+                                                        оферты</i></a></label>
+                                            <div class="help-block"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field modal__field">
+                                    <div class="page-footer-button">
+                                        <div class="form-group">
+                                            <input type="hidden" id="submitInput" name="submit" value="0">
+                                            <button type="submit"
+                                                class="btn btn-success btn-xs s-custom-btn s-custom-primary s-custom-btn--icon mt-5 mb-5 btn btn-success submitForm">подать
+                                                заявление</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-us-page__right right-calc-block ml-2 fixed-sidebar">
+                            </div>
+                            <input type="hidden" id="url_post_pass_birthday"
+                                value="/policy/travel/get-pass-birthday-data">
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content py-5">
+    <div class="container">
+        <div class="row cards justify-content-center">
+            <div class="col-12 text-center pb-5">
+                <h1>Sugurta bolimi</h1>
+            </div>
+            {% for item in sugurta%}
+            <div class="col-12 col-md-11 col-lg-3 mt-4 mt-lg-0 m-2 border">
+                <div class="py-5 text-center">
+                    <img src="{{ item.image.url}}" class="img-fluid" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ item.title}}</h4>
+                        <p class="card-text">{{ item.description}}</p>
+                        <a href="/{{item.link_page}}" class="btn btn-outline-primary">Ro'yxatdan otkazish</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        $('#region-select').on('change', function () {
+            var regionId = $(this).val();
+            $('#city-select').empty();
+            if (regionId) {
+                $.ajax({
+                    url: '/cities/' + regionId,
+                    success: function (data) {
+                        data.forEach(function (city) {
+                            $('#city-select').append('<option value="' + city.id + '">' + city.name + '</option>');
+                        });
+                    }
+                });
+            }
+        });
+    });
+</script>
+{% endblock%}

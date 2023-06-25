@@ -1,0 +1,691 @@
+:root {
+    --primary: #f1ca29;
+    --textOnPrimary: #FFFFFF;
+    --primaryDarker: #0267AF;
+    --primaryLighter: #AADCFF;
+    --primaryLightest: #EAF7FF;
+    --backgroundStart: #f5fcff;
+
+    --light: #F3F3F3;
+    --lighter: #FAFAFA;
+    --highlighter: #FFE561;
+    --highlighterTwo: #FFE561;
+    --highlighterThree: #DCFFB2;
+
+    --inputBackground: #FFF;
+    --inputBorder: #AADCFF;
+
+    --headerBackground: #EAF7FF;
+
+    /* This is not a bug. It's deliberately malformed
+to allow for further tweaking using JS! */
+    --headerCircles: "rgba(7, 152, 255, ";
+
+    --darkText: #222222;
+    --headerText: #222222;
+    --bodyText: #373d42;
+    --darkTextSecondary: #999999;
+    --navigationLinkColor: #333333;
+
+    --serifFonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --monoFonts: "SF Mono", Menlo, monospace, "SF Pro Icons";
+
+    --pageBackground: #FFFFFF;
+
+    --linkForeground: #0071bf;
+    --linkBackground: hsla(209, 100%, 52%, 0.07);
+    --linkHoverForeground: hsla(50, 100%, 25%, 1);
+    --linkHoverBackground: hsla(50, 100%, 50%, 0.51);
+
+    --linkFilter: "none";
+    --linkFilterHover: "none";
+
+    --orangeBigLeaf: #008000;
+    --orangeSmallLeaf: #01C201;
+    --orangeBodyTop: #FFD500;
+    --orangeBodyMiddle: #FFA601;
+    --orangeBodyBottom: #FF8000;
+    --orangeBorder: #333333;
+    --orangeBackground: #FFFFFF;
+
+    --logoTextColor: #0798FF;
+    /* should be the same as primary */
+    --logoTextShadow: #333333;
+
+    --structureBorder: #EEE;
+    --darkStructureBorder: #666;
+    --mediaBorder: #333;
+    --tableBorder: 1px solid #CCC;
+
+    --codeFilter: none;
+}
+
+html.theme_pink {
+    --primary: #ff0767;
+    --textOnPrimary: #FFFFFF;
+    --primaryDarker: #99003b;
+    --primaryLighter: #ffb1cf;
+    --primaryLightest: #ffdae8;
+    --backgroundStart: #ffaecd;
+    --light: #f6f6f6;
+    --lighter: #fffcfe;
+    --highlighter: #b2fff8;
+    --highlighterTwo: #bffff9;
+    --highlighterThree: #ffcfb2;
+    --inputBackground: #FFF;
+    --inputBorder: #ff99c0;
+    --headerBackground: #ffeaf2;
+    --headerCircles: "rgba(255, 7, 103, ";
+    --darkText: #222222;
+    --headerText: #97033c;
+    --bodyText: #373d42;
+    --navigationLinkColor: #333333;
+    --serifFonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --monoFonts: "SF Mono", Menlo, monospace, "SF Pro Icons";
+    --pageBackground: #ffffff;
+    --linkForeground: #d70053;
+    --linkBackground: rgba(215, 0, 83, .07);
+    --linkHoverForeground: hsla(50, 100%, 25%, 1);
+    --linkHoverBackground: hsla(50, 100%, 50%, 0.51);
+    --orangeBigLeaf: #008000;
+    --orangeSmallLeaf: #01C201;
+    --orangeBodyTop: #FFD500;
+    --orangeBodyMiddle: #FFA601;
+    --orangeBodyBottom: #FF8000;
+    --orangeBorder: #333333;
+    --orangeBackground: #FFFFFF;
+    --logoTextColor: #e70059;
+    --logoTextShadow: #333333;
+    --structureBorder: #EEE;
+    --darkStructureBorder: #666;
+    --mediaBorder: #333;
+    --tableBorder: 1px solid #CCC;
+}
+
+html.theme_yellow {
+    --primary: rgb(104, 99, 5);
+    --textOnPrimary: #FFFFFF;
+    --primaryDarker: rgb(36, 34, 0);
+    --primaryLighter: #FFEB3B;
+    --primaryLightest: #fff5c5;
+    --backgroundStart: #fffcdf;
+    --light: #F3F3F3;
+    --lighter: #FAFAFA;
+    --highlighter: rgb(206, 234, 255);
+    --highlighterTwo: #FFE561;
+    --highlighterThree: #DCFFB2;
+    --inputBackground: hsl(0, 0%, 100%);
+    --inputBorder: #ffd500;
+    --headerBackground: #fff38b;
+    --headerCircles: "rgba(200, 150, 150, ";
+    --darkText: #222222;
+    --headerText: #3a3802;
+    --bodyText: #373d42;
+    --navigationLinkColor: #333333;
+    --serifFonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --monoFonts: "SF Mono", Menlo, monospace, "SF Pro Icons";
+    --pageBackground: #FFFFFF;
+    --linkForeground: hsl(55, 100%, 14%);
+    --linkBackground: hsl(54, 100%, 77%);
+    --linkHoverForeground: hsl(0, 0%, 16%);
+    --linkHoverBackground: hsl(50, 100%, 50%);
+    --orangeBigLeaf: #008000;
+    --orangeSmallLeaf: #01C201;
+    --orangeBodyTop: #FFD500;
+    --orangeBodyMiddle: #FFA601;
+    --orangeBodyBottom: #FF8000;
+    --orangeBorder: #333333;
+    --orangeBackground: #FFFFFF;
+    --logoTextColor: #868000;
+    --logoTextShadow: #333333;
+    --structureBorder: #EEE;
+    --darkStructureBorder: #666;
+    --mediaBorder: #333;
+    --tableBorder: 1px solid #CCC;
+}
+
+html.theme_green {
+    --primary: #428989;
+    --textOnPrimary: #FFFFFF;
+    --primaryDarker: #245455;
+    --primaryLighter: #66BB6A;
+    --primaryLightest: #a4f8a8;
+    --backgroundStart: #f1fff1;
+    --light: #F3F3F3;
+    --lighter: #FAFAFA;
+    --highlighter: #fbdbff;
+    --highlighterTwo: #FFE561;
+    --highlighterThree: #DCFFB2;
+    --inputBackground: #FFF;
+    --inputBorder: #72b3b6;
+    --headerBackground: #deffe0;
+    --headerCircles: "rgba(7, 152, 255, ";
+    --darkText: #222222;
+    --headerText: #1c3a3a;
+    --bodyText: #373d42;
+    --navigationLinkColor: #333333;
+    --serifFonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --monoFonts: "SF Mono", Menlo, monospace, "SF Pro Icons";
+    --pageBackground: #FFFFFF;
+    --linkForeground: #008000;
+    --linkBackground: hsla(120, 100%, 25%, .07);
+    --linkHoverForeground: hsla(50, 100%, 25%, 1);
+    --linkHoverBackground: hsla(50, 100%, 50%, 0.51);
+    --orangeBigLeaf: #008000;
+    --orangeSmallLeaf: #01C201;
+    --orangeBodyTop: #FFD500;
+    --orangeBodyMiddle: #FFA601;
+    --orangeBodyBottom: #FF8000;
+    --orangeBorder: #333333;
+    --orangeBackground: #FFFFFF;
+    --logoTextColor: #428889;
+    --logoTextShadow: #333333;
+    --structureBorder: #EEE;
+    --darkStructureBorder: #666;
+    --mediaBorder: #333;
+    --tableBorder: 1px solid #CCC;
+}
+
+html.theme_purple {
+    --primary: #6b16a6;
+    --textOnPrimary: #FFFFFF;
+    --primaryDarker: #420a66;
+    --primaryLighter: #cc98f0;
+    --primaryLightest: #edd4ff;
+    --backgroundStart: #f0dbff;
+    --light: #F3F3F3;
+    --lighter: #FAFAFA;
+    --highlighter: #A6F6FF;
+    --highlighterTwo: #FFE561;
+    --highlighterThree: #d5d5d5;
+    --inputBackground: #FFF;
+    --inputBorder: #815b9b;
+    --headerBackground: #bb94d7;
+    --headerCircles: "rgba(62, 0, 104, ";
+    --darkText: #280540;
+    --headerText: #3d0b5f;
+    --bodyText: #373d42;
+    --navigationLinkColor: #333333;
+    --serifFonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --monoFonts: "SF Mono", Menlo, monospace, "SF Pro Icons";
+    --pageBackground: #FFFFFF;
+    --linkForeground: #6b16a6;
+    --linkBackground: #f1e9f6;
+    --linkHoverForeground: #605814;
+    --linkHoverBackground: #ffeb43;
+;
+    --orangeBigLeaf: #008000;
+    --orangeSmallLeaf: #01C201;
+    --orangeBodyTop: #FFD500;
+    --orangeBodyMiddle: #FFA601;
+    --orangeBodyBottom: #FF8000;
+    --orangeBorder: #333333;
+    --orangeBackground: #FFFFFF;
+    --logoTextColor: #6b17a7;
+    --logoTextShadow: #000000;
+    --structureBorder: #EEE;
+    --darkStructureBorder: #666;
+    --mediaBorder: #333;
+    --tableBorder: 1px solid #CCC;
+}
+
+html.theme_pico8 {
+    --primary: #7E2553;
+    --textOnPrimary: #FFFFFF;
+    --primaryDarker: #1D2B53;
+    --primaryLighter: #9fdaff;
+    --primaryLightest: #ffe4d3;
+    --backgroundStart: #f9e9d9;
+    --light: #F3F3F3;
+    --lighter: #FAFAFA;
+    --highlighter: #ffbbd3;
+    --highlighterTwo: #ffec27;
+    --highlighterThree: #FFCCAA;
+    --inputBackground: #FFF;
+    --inputBorder: #C39D89;
+    --headerBackground: #FFCCAA;
+    --headerCircles: "rgba(131, 118, 156, ";
+    --darkText: #222222;
+    --headerText: #222;
+    --bodyText: #373d42;
+    --navigationLinkColor: #333333;
+    --serifFonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --monoFonts: "SF Mono", Menlo, monospace, "SF Pro Icons";
+    --pageBackground: #FFFFFF;
+    --linkForeground: #7E2553;
+    --linkBackground: #FFF1E8;
+    --linkHoverForeground: #008751;
+    --linkHoverBackground: #d6ff6b;
+    --orangeBigLeaf: #008000;
+    --orangeSmallLeaf: #01C201;
+    --orangeBodyTop: #FFD500;
+    --orangeBodyMiddle: #FFA601;
+    --orangeBodyBottom: #FF8000;
+    --orangeBorder: #333333;
+    --orangeBackground: #FFFFFF;
+    --logoTextColor: #7e2653;
+    --logoTextShadow: #000000;
+    --structureBorder: #EEE;
+    --darkStructureBorder: #666;
+    --mediaBorder: #333;
+    --tableBorder: 1px solid #CCC;
+}
+
+html.theme_black {
+    --primary: #000000;
+    --textOnPrimary: #FFFFFF;
+    --primaryDarker: #3e3e3e;
+    --primaryLighter: #737373;
+    --primaryLightest: #c1c1c1;
+    --backgroundStart: #ececec;
+    --light: #F3F3F3;
+    --lighter: #FAFAFA;
+    --highlighter: #FFE561;
+    --highlighterTwo: #FFE561;
+    --highlighterThree: #DCFFB2;
+    --inputBackground: #FFF;
+    --inputBorder: #8a8a8a;
+    --headerBackground: #d6d6d6;
+    --headerCircles: "rgba(0, 0, 0, ";
+    --darkText: #222222;
+    --headerText: #222;
+    --bodyText: #373d42;
+    --navigationLinkColor: #333333;
+    --serifFonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --monoFonts: "SF Mono", Menlo, monospace, "SF Pro Icons";
+    --pageBackground: #FFFFFF;
+    --linkForeground: #333;
+    --linkBackground: #EEE;
+    --linkHoverForeground: hsla(50, 100%, 25%, 1);
+    --linkHoverBackground: hsla(50, 100%, 50%, 0.51);
+    --orangeBigLeaf: #008000;
+    --orangeSmallLeaf: #01C201;
+    --orangeBodyTop: #FFD500;
+    --orangeBodyMiddle: #FFA601;
+    --orangeBodyBottom: #FF8000;
+    --orangeBorder: #333333;
+    --orangeBackground: #FFFFFF;
+    --logoTextColor: #a9a9a9;
+    --logoTextShadow: #333333;
+    --structureBorder: #EEE;
+    --darkStructureBorder: #666;
+    --mediaBorder: #333;
+    --tableBorder: 1px solid #CCC;
+}
+
+html.theme_brown {
+    --primary: #99242c;
+    --textOnPrimary: #FFFFFF;
+    --primaryDarker: #67181d;
+    --primaryLighter: #9a4a50;
+    --primaryLightest: #d8abae;
+    --backgroundStart: #ffd4d7;
+    --backgroundStart: #ffe0e2;
+    --light: #F3F3F3;
+    --lighter: #FAFAFA;
+    --highlighter: #FFE561;
+    --highlighterTwo: #FFE561;
+    --highlighterThree: #DCFFB2;
+    --inputBackground: #FFF;
+    --inputBorder: #672025;
+    --headerBackground: #e48289;
+    --headerCircles: "rgba(255, 236, 39, ";
+    --darkText: #222222;
+    --headerText: #531418;
+    --bodyText: #373d42;
+    --navigationLinkColor: #333333;
+    --serifFonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --monoFonts: "SF Mono", Menlo, monospace, "SF Pro Icons";
+    --pageBackground: #FFFFFF;
+    --linkForeground: #333;
+    --linkBackground: #ffe2e4;
+    --linkHoverForeground: #000;
+    --linkHoverBackground: #ffc6c8;
+    --orangeBigLeaf: #008000;
+    --orangeSmallLeaf: #01C201;
+    --orangeBodyTop: #FFD500;
+    --orangeBodyMiddle: #FFA601;
+    --orangeBodyBottom: #FF8000;
+    --orangeBorder: #333333;
+    --orangeBackground: #FFFFFF;
+    --logoTextColor: #9a242c;
+    --logoTextShadow: #000000;
+    --structureBorder: #EEE;
+    --darkStructureBorder: #666;
+    --mediaBorder: #333;
+    --tableBorder: 1px solid #CCC;
+}
+
+html.theme_dark {
+    --primary: #518ac1;
+    --darkTextSecondary: #cacaca;
+    --textOnPrimary: #ffffff;
+    --primaryDarker: #3a6fa1;
+    --primaryLighter: #AADCFF;
+    --primaryLightest: #3e4f5f;
+    --backgroundStart: #000000;
+    --light: #54606f;
+    --lighter: #24282d;
+    --highlighter: #3a6fa1;
+    --highlighterTwo: #3a6fa1;
+    --highlighterThree: #3a6fa1;
+    --inputBackground: #373b41;
+    --inputBorder: #8eb2e8;
+    --headerBackground: #24282d;
+    --headerCircles: "rgba(170, 220, 255, ";
+    --darkText: hsla(216deg, 100%, 98%, .75);
+    --headerText: #7f8fa7;
+    --bodyText: #f5f9fe;
+    --navigationLinkColor: #333333;
+    --serifFonts: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --monoFonts: "SF Mono", Menlo, monospace, "SF Pro Icons";
+    --pageBackground: #383a42;
+    --linkForeground: hsl(205, 100%, 75%, 1);
+    --linkBackground: hsla(209, 100%, 52%, .38);
+    --linkHoverForeground: hsla(50, 100%, 71%, 1);
+    --linkHoverBackground: hsla(50, 95%, 24%, .75);
+    --orangeBigLeaf: #008000;
+    --orangeSmallLeaf: #01C201;
+    --orangeBodyTop: #FFD500;
+    --orangeBodyMiddle: #FFA601;
+    --orangeBodyBottom: #FF8000;
+    --orangeBorder: #333333;
+    --orangeBackground: #FFFFFF;
+    --logoTextColor: #FFFFFF;
+    --logoTextShadow: #333333;
+    --structureBorder: #504f4f;
+    --darkStructureBorder: #666;
+    --mediaBorder: #333;
+    --tableBorder: 1px solid #CCC;
+}
+
+html.theme_dark .centerImageNoBorder img {
+    filter: sepia(.2) grayscale(.3);
+    opacity: .75;
+    background-color: #EEE;
+}
+
+html.theme_dark .centerImageNoBorder img:hover {
+    filter: none;
+    opacity: 1;
+}
+
+html.theme_dark .centerImage img {
+    filter: sepia(.2) grayscale(.3);
+    opacity: .75;
+}
+
+html.theme_dark .centerImage img:hover {
+    filter: none;
+    opacity: 1;
+}
+
+html.theme_dark #rightContents nav .fresh_caption {
+    filter: invert(.75)
+}
+
+html.theme_dark .sig {
+    filter: invert(1);
+}
+
+html.theme_dark #mainFooter img {
+    filter: invert(1);
+}
+
+html.theme_dark #mainFooter img:hover {
+    filter: invert(.75);
+}
+
+html.theme_dark img[src*="kirupa_sig"] {
+    filter: invert(1);
+}
+
+html.theme_dark :not(pre)>code[class*="language-"],
+html.theme_dark pre[class*="language-"] {
+    background: rgb(0 0 0 / 20%) !important;
+    border-radius: 10px !important;
+}
+
+html.theme_dark code[class*="language-"],
+html.theme_dark pre[class*="language-"] {
+    color: var(--bodyText) !important;
+    text-shadow: 0 1px #383a4287 !important;
+    filter: var(--codeFilter);
+}
+
+html.theme_dark .token.atrule,
+html.theme_dark .token.attr-value,
+html.theme_dark .token.keyword {
+    color: #C586C0 !important;
+}
+
+html.theme_dark .token.property,
+html.theme_dark .token.tag,
+html.theme_dark .token.boolean,
+html.theme_dark .token.number,
+html.theme_dark .token.constant,
+html.theme_dark .token.symbol,
+html.theme_dark .token.deleted {
+    color: #569CD6 !important;
+}
+
+html.theme_dark .token.selector,
+html.theme_dark .token.attr-name,
+html.theme_dark .token.string,
+html.theme_dark .token.char,
+html.theme_dark .token.builtin,
+html.theme_dark .token.inserted {
+    color: #CE9178 !important;
+}
+
+html.theme_dark .token.operator,
+html.theme_dark .token.entity,
+html.theme_dark .token.url,
+html.theme_dark .language-css html.theme_dark .token.string,
+html.theme_dark .style .token.string {
+    color: var(--bodyText) !important;
+    background: none !important;
+}
+
+html.theme_dark .line-highlight {
+    background: #1b7fcc38;
+}
+
+html.theme_dark .kirupaInput {
+    border-color: var(--headerBackground);
+}
+
+html.theme_dark .kirupaInput:focus {
+    background-color: var(--headerBackground);
+    box-shadow: 0px 0px 10px 0px var(--primaryDarker);
+    color: var(--bodyText);
+}
+
+html.theme_dark #sigNewsletter #mce-EMAIL {
+    border-color: var(--inputBorder);
+}
+
+html.theme_dark .articleActions a {
+    filter: invert(.9);
+}
+
+html.theme_dark .themeLabel {
+    filter: brightness(1.5) grayscale(.5);
+}
+
+html.theme_dark .syntaxhighlighter {
+    filter: invert(1);
+    opacity: .75;
+}
+
+html.theme_dark .yellowEmphasis {
+    filter: grayscale(.5);
+}
+
+html.theme_yellow_dark {
+    --primary: #776600;
+    --darkTextSecondary: #cacaca;
+    --primaryDarker: #927e00;
+    --primaryLighter: rgb(181 156 0);
+    --primaryLightest: #bfa500;
+    --backgroundStart: #776703;
+    --lighter: #27230b;
+    --highlighter: #776703;
+    --highlighterTwo: #776703;
+    --highlighterThree: #776703;
+    --inputBackground: #433c22;
+    --inputBorder: #776703;
+    --headerBackground: #292720;
+    --headerCircles: "rgba(181, 156, 0, ";
+    --headerText: rgb(236 204 0 / 0.75);
+    --pageBackground: #3a382f;
+    --linkFilter: hue-rotate(205deg);
+    --linkFilterHover: hue-rotate(295deg);
+
+    --codeFilter: hue-rotate(195deg);
+}
+
+html.theme_pink_dark {
+    --primary: #ca4fb2;
+    --darkTextSecondary: #cacaca;
+    --primaryDarker: #9c4c9c;
+    --primaryLighter: rgb(179 99 179);
+    --primaryLightest: #bf8abf;
+    --backgroundStart: #7b397b;
+    --lighter: #270227;
+    --highlighter: #ab00ad;
+    --highlighterTwo: #ab00ad;
+    --highlighterThree: #ab00ad;
+    --inputBackground: #3e173e;
+    --inputBorder: #7b387b;
+    --headerBackground: #1b001b;
+    --headerCircles: "rgba(191, 138, 191, ";
+    --headerText: rgb(189 135 189 / 78%);
+    --pageBackground: #290229;
+    --linkFilter: hue-rotate(445deg);
+    --linkFilterHover: hue-rotate(155deg);
+
+    --codeFilter: hue-rotate(85deg);
+}
+
+html.theme_green_dark {
+    --primary: #2daa72;
+    --darkTextSecondary: #adcaba;
+    --primaryDarker: #1f744e;
+    --primaryLighter: rgb(2, 56, 41);
+    --primaryLightest: #123027;
+    --backgroundStart: #000000;
+    --lighter: #061911;
+    --highlighter: #207b52;
+    --highlighterTwo: #207b52;
+    --highlighterThree: #207b52;
+    --inputBackground: #0f3f2a;
+    --inputBorder: #13ab7e;
+    --headerBackground: #0b2c1d;
+    --headerCircles: "rgba(70, 255, 173, ";
+    --headerText: rgba(70, 255, 173, 0.62);
+    --pageBackground: #062014;
+    --linkFilter: hue-rotate(275deg);
+    --linkFilterHover: hue-rotate(377deg);
+    --structureBorder: #0c4129;
+    --darkStructureBorder: #0e412a;
+
+    --codeFilter: hue-rotate(285deg);
+}
+
+html.theme_purple_dark {
+    --primary: #972fc6;
+    --darkTextSecondary: #bdadca;
+    --primaryDarker: #842cae;
+    --primaryLighter: rgb(189, 73, 243);
+    --primaryLightest: #551e70;
+    --backgroundStart: #4d1866;
+    --lighter: #0c050f;
+    --highlighter: #561e70;
+    --highlighterTwo: #551e70;
+    --highlighterThree: #551e70;
+    --inputBackground: #270e35;
+    --inputBorder: #9630c6;
+    --headerBackground: #15081c;
+    --headerCircles: "rgba(190, 59, 255, ";
+    --headerText: #b881d5;
+    --pageBackground: #230d2e;
+    --linkFilter: hue-rotate(420deg);
+    --linkFilterHover: hue-rotate(577deg);
+    --structureBorder: #4a1a61;
+    --darkStructureBorder: #0e412a;
+
+    --codeFilter: hue-rotate(45deg);
+}
+
+html.theme_pico8_dark {
+    --primary: #29ADFF;
+    --darkTextSecondary: #bdadca;
+    --primaryDarker: #c0597e;
+    --primaryLighter: rgb(190, 90, 126);
+    --primaryLightest: #551e70;
+    --backgroundStart: #4f475d;
+    --lighter: #362531;
+    --highlighter: #FF004D;
+    --highlighterTwo: #FF004D;
+    --highlighterThree: #FF004D;
+    --inputBackground: #682b41;
+    --inputBorder: var(--primary);
+    --headerBackground: #332e3c;
+    --headerCircles: "rgba(255, 0, 77, ";
+    --headerText: #ac5479;
+    --pageBackground: #1b1820;
+    --linkFilter: hue-rotate(713deg);
+    --linkFilterHover: hue-rotate(517deg);
+    --structureBorder: #3c3747;
+    --darkStructureBorder: #0e412a;
+    --codeFilter: hue-rotate(-5deg);
+}
+
+html.theme_black_dark {
+    --primary: #009aff;
+    --darkTextSecondary: #bdbdbd;
+    --primaryDarker: #6eb3de;
+    --primaryLighter: #848484;
+    --primaryLightest: #000000;
+    --backgroundStart: #212121;
+    --lighter: #2f2f2f;
+    --highlighter: #5d5d5d;
+    --highlighterTwo: #5d5d5d;
+    --highlighterThree: #5d5d5d;
+    --inputBackground: #262626;
+    --inputBorder: var(--primary);
+    --headerBackground: #191919;
+    --headerCircles: "rgba(225, 225, 225, ";
+    --headerText: #777777;
+    --pageBackground: #232323;
+    --linkFilter: hue-rotate(713deg);
+    --linkFilterHover: hue-rotate(517deg);
+    --structureBorder: #3c3747;
+    --darkStructureBorder: #0e412a;
+    --codeFilter: hue-rotate(-5deg);
+}
+
+html.theme_brown_dark {
+    --primary: #a56554;
+    --darkTextSecondary: #caadad;
+    --primaryDarker: #865446;
+    --primaryLighter: rgb(225, 139, 112);
+    --primaryLightest: #4a2f28;
+    --backgroundStart: #4f475d;
+    --lighter: #201410;
+    --highlighter: #95185d;
+    --highlighterTwo: #95185d;
+    --highlighterThree: #95185d;
+    --inputBackground: #4f3129;
+    --inputBorder: var(--primary);
+    --headerBackground: #432b24;
+    --headerCircles: "rgba(190, 90, 126, ";
+    --headerText: #a56554;
+    --pageBackground: #2c1c17;
+    --linkFilter: hue-rotate(533deg);
+    --linkFilterHover: hue-rotate(367deg);
+    --structureBorder: #53352b;
+    --darkStructureBorder: #0e412a;
+    --codeFilter: hue-rotate(145deg);
+}
